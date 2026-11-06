@@ -1,0 +1,2352 @@
+<!DOCTYPE html><html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Lumière Preschool — tempat anak tumbuh melalui rasa ingin tahu, eksplorasi, dan pengalaman belajar yang bermakna."><title>Lumière Preschool</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"><style>:root{--royal:#4D83DB;--deep:#2455B5;--sky:#79B8EF;--baby:#B9DCFA;--peri:#C8D5F5;--ice:#EAF4FF;--ink:#26364A;--muted:#68788B;--white:#fff;--yellow:#FFD66B;--pink:#F9DDE5;--sage:#DDEBDD;--shadow:0 16px 40px rgba(36,85,181,.12)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;color:var(--ink);font-family:"Nunito",sans-serif;line-height:1.7;background:#fff}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+button{font:inherit}
+.container{width:min(1180px,calc(100% - 48px));margin-inline:auto}
+.section-pad{padding:88px 0}
+h1,h2,h3{font-family:"Fredoka",sans-serif;font-weight:500;line-height:1.13;margin:0 0 18px}
+h1{font-size:clamp(42px,5vw,68px);color:var(--deep);letter-spacing:-1.5px}
+h1 em,h2 em{font-style:normal;color:var(--royal)}
+h2{font-size:clamp(34px,4vw,48px);color:var(--deep)}
+p{margin:0 0 18px}
+.site-header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.96);backdrop-filter:blur(14px);box-shadow:0 4px 22px rgba(36,85,181,.07)}
+.navbar{min-height:86px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand img{width:154px;height:72px;object-fit:contain}
+.nav-links{display:flex;align-items:center;gap:17px;font-size:13px;font-weight:900;color:var(--deep)}
+.nav-links>a,.drop-trigger{padding:12px 0;white-space:nowrap}
+.nav-links>a:hover,.drop-trigger:hover,.nav-links .active{color:var(--royal)}
+.drop-trigger{border:0;background:none;color:var(--deep);font-weight:900;cursor:pointer}
+.drop-trigger span{margin-left:4px;color:var(--royal)}
+.dropdown{position:relative}
+.dropdown-menu{display:none;position:absolute;top:calc(100% + 5px);left:-16px;min-width:205px;padding:9px;background:#fff;border:1px solid #e5efff;border-radius:15px;box-shadow:var(--shadow)}
+.dropdown:hover .dropdown-menu,.dropdown:focus-within .dropdown-menu,.dropdown.open .dropdown-menu{display:block}
+.dropdown-menu a{display:block;padding:10px 12px;border-radius:9px;font-size:13px;color:var(--ink)}
+.dropdown-menu a:hover{background:var(--ice);color:var(--deep)}
+.nav-actions{display:flex;align-items:center;gap:10px}
+.language-toggle{width:38px;height:38px;border:1px solid #d8e7ff;border-radius:50%;background:var(--ice);color:var(--deep);font-weight:900;font-size:11px;cursor:pointer}
+.button{display:inline-flex;align-items:center;justify-content:center;background:var(--royal);color:white;padding:13px 24px;border-radius:30px;font-weight:900;font-size:14px;box-shadow:0 7px 0 rgba(36,85,181,.12);transition:.2s}
+.button:hover{background:var(--deep);transform:translateY(-2px)}
+.button-small{padding:10px 17px;font-size:12px}
+.button-outline{background:transparent;color:var(--deep);border:1.5px solid var(--royal);box-shadow:none}
+.button-outline:hover{color:white}
+.menu-toggle{display:none;border:0;background:var(--ice);color:var(--deep);border-radius:10px;padding:8px 12px;font-size:21px;cursor:pointer}
+.hero{position:relative;isolation:isolate;overflow:hidden;padding:74px 0 118px;background:linear-gradient(115deg,#fff 0%,#fff 42%,#f5faff 100%)}
+.hero-wash{position:absolute;inset:0;background:radial-gradient(ellipse at 88% 40%,rgba(185,220,250,.35),transparent 48%);z-index:-1}
+.hero-grid{display:grid;grid-template-columns:.88fr 1.12fr;align-items:center;gap:50px}
+.hero-copy{position:relative;z-index:2;padding:16px 0}
+.eyebrow{display:inline-block;color:var(--royal);font-size:12px;font-weight:900;letter-spacing:1.6px;text-transform:uppercase;margin-bottom:13px}
+.hero-lead{max-width:510px;color:var(--muted);font-size:17px;line-height:1.85;margin:20px 0 28px}
+.hero-buttons{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.text-link{color:var(--deep);font-weight:900;font-size:14px}
+.text-link:hover{text-decoration:underline}
+.hero-note{display:flex;align-items:center;gap:10px;margin-top:30px;color:var(--muted);font-size:12px;font-weight:800}
+.hero-note span:first-child{font-size:23px;color:#e9b84b}
+.hero-visual{height:480px;position:relative;border-radius:34px 120px 34px 120px;overflow:visible}
+.hero-visual:before{content:"";position:absolute;inset:-18px 22px 18px -18px;border:2px solid rgba(77,131,219,.2);border-radius:34px 120px 34px 120px}
+.hero-visual>img{position:relative;width:100%;height:100%;object-fit:cover;object-position:center;border-radius:34px 120px 34px 120px;box-shadow:var(--shadow)}
+.floating-card{position:absolute;z-index:2;background:white;border-radius:16px;padding:12px 16px;box-shadow:var(--shadow);display:flex;align-items:center;gap:9px;font-size:12px;color:var(--deep)}
+.floating-card span{font-size:22px}
+.floating-top{top:35px;left:-34px}
+.floating-bottom{bottom:30px;right:-28px}
+.hero-decor{position:absolute;color:#f2c34f;opacity:.7;z-index:0}
+.decor-star{font-size:42px;left:5%;top:10%}
+.decor-sun{font-size:66px;right:4%;top:8%}
+.hero-wave{position:absolute;bottom:-1px;left:0;width:100%;height:80px;background:var(--ice);clip-path:ellipse(62% 55% at 50% 100%);z-index:-1}
+.welcome{background:#DCEEFF}
+.welcome-grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:80px}
+.art-sticker{position:absolute;right:0;bottom:8px;background:var(--yellow);padding:16px 22px;border-radius:18px;font-family:"Fredoka";font-size:18px;color:#5b4a22;transform:rotate(4deg)}
+.section-copy p,.section-heading p{color:var(--muted);font-size:15px;line-height:1.9}
+.program-preview{background:var(--ice)}
+.section-heading{text-align:center;max-width:730px;margin:0 auto 42px}
+.section-heading p{max-width:620px;margin:0 auto}
+.program-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.program-card{padding:27px;border-radius:24px;min-height:250px;box-shadow:0 8px 24px rgba(36,85,181,.06);transition:.25s}
+.program-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.card-blue{background:#dcecfb}
+.card-yellow{background:#fff1c8}
+.card-pink{background:#f9e2e8}
+.card-icon{display:block;font-size:38px;margin-bottom:10px}
+.age{font-size:10px;letter-spacing:1.5px;font-weight:900;color:var(--deep)}
+.program-card h3{font-size:25px;color:var(--deep);margin:7px 0}
+.program-card p{font-size:13px;color:#596b80;line-height:1.8}
+.center-action{text-align:center;margin-top:34px}
+.approach-preview{background:#fff}
+.approach-panel{display:grid;grid-template-columns:.8fr 1.2fr;align-items:center;gap:70px;background:#f5f9ff;padding:55px;border-radius:34px}
+.approach-art{min-height:230px;border-radius:28px;background:linear-gradient(135deg,#b9dcfa,#eaf4ff);display:flex;align-items:center;justify-content:center;gap:14px;font-size:52px}
+.approach-art span:nth-child(2){transform:translateY(-28px)}
+.approach-art span:nth-child(3){transform:translateY(22px)}
+.school-life-preview{background:#fff}
+.life-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.life-card{min-height:210px;border-radius:24px;padding:25px;display:flex;flex-direction:column;justify-content:flex-end;transition:.2s}
+.life-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.life-card span{font-size:40px;margin-bottom:auto}
+.life-card strong{font:500 25px "Fredoka";color:var(--deep)}
+.life-card small{color:#52667d;font-weight:700}
+.life-facility{background:#e4f0ff}
+.life-gallery{background:#fce9ee}
+.life-activities{background:#fff2ce}
+.admission-cta{background:linear-gradient(120deg,#2455b5,#4d83db);text-align:center;color:white}
+.cta-inner{max-width:720px}
+.admission-cta .eyebrow,.admission-cta h2,.admission-cta h2 em{color:white}
+.admission-cta p{color:#eaf4ff;margin:0 auto 25px;max-width:560px}
+.admission-cta .button{background:#fff;color:var(--deep);box-shadow:none}
+.footer{background:#173d78;color:#fff;padding:54px 0 20px}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:32px}
+.footer-brand-block img{width:160px;height:90px;object-fit:contain;object-position:left center}
+.footer p,.footer a{font-size:12px;color:#e3edff;display:block;margin:7px 0}
+.footer h3{font-size:18px;color:#fff;margin-bottom:14px}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.2);margin-top:30px;padding-top:16px;display:flex;justify-content:space-between;gap:15px;font-size:11px}
+.footer-bottom a{margin:0}
+.footer-bottom a:hover,.footer a:hover{color:#ffdc7b}
+@media (max-width:1100px){
+  .nav-links{gap:11px;font-size:12px}
+  .navbar{gap:12px}
+  .brand img{width:130px}
+  .hero-grid{gap:30px}
+  .hero-visual{height:420px}
+}
+@media (max-width:850px){
+  .navbar{min-height:76px}
+  .menu-toggle{display:block;margin-left:auto}
+  .nav-links{display:none;position:absolute;top:76px;left:0;right:0;background:#fff;padding:16px 24px 22px;box-shadow:var(--shadow);align-items:stretch;flex-direction:column;gap:2px;max-height:calc(100vh - 76px);overflow:auto}
+  .nav-links.open{display:flex}
+  .nav-links>a,.drop-trigger{display:block;width:100%;text-align:left;padding:11px 0}
+  .dropdown-menu{position:static;box-shadow:none;border:0;background:var(--ice);margin:3px 0 8px;padding:6px 10px}
+  .nav-actions .button{display:none}
+  .hero{padding:55px 0 100px}
+  .hero-grid,.welcome-grid,.approach-panel{grid-template-columns:1fr}
+  .hero-copy{order:1}
+  .hero-visual{order:2;width:92%;margin:10px auto 0;height:390px}
+  .welcome-grid{gap:30px}
+  .welcome-art{order:2}
+  .approach-panel{gap:30px;padding:35px}
+  .program-grid,.footer-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:560px){
+  .container{width:calc(100% - 34px)}
+  .section-pad{padding:65px 0}
+  .brand img{width:122px;height:64px}
+  .hero{padding-top:42px}
+  .hero h1{font-size:43px}
+  .hero-lead{font-size:15px}
+  .hero-visual{height:290px;width:94%;border-radius:25px 75px 25px 75px}
+  .hero-visual>img{border-radius:25px 75px 25px 75px}
+  .floating-top{left:-12px;top:20px}
+  .floating-bottom{right:-12px;bottom:15px}
+  .floating-card{font-size:10px;padding:9px 11px}
+  .program-grid,.life-grid{grid-template-columns:1fr}
+  .program-card{min-height:0}
+  .welcome-photo-placeholder{height:250px}
+  .art-sticker{right:-3px}
+  .approach-panel{padding:25px}
+  .approach-art{min-height:180px;font-size:40px}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:22px}
+  .footer-bottom{flex-wrap:wrap}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none!important;animation:none!important}
+}
+/* NAVBAR REVISION 01: Royal Blue header with white navigation */
+.site-header{background:#2455B5;box-shadow:0 4px 20px rgba(20,55,125,.18);border-bottom:1px solid rgba(255,255,255,.12)}
+.nav-links{color:#fff}
+.nav-links>a,
+.drop-trigger{color:#fff}
+.nav-links>a:hover,
+.drop-trigger:hover,
+.nav-links .active{color:#dcecff}
+.drop-trigger span{color:#fff}
+.dropdown-menu{background:#fff;border:1px solid #dce9ff;box-shadow:0 14px 30px rgba(13,45,105,.2)}
+.dropdown-menu a{color:#2455B5}
+.dropdown-menu a:hover{background:#EAF4FF;color:#173d78}
+.language-toggle{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);color:#fff}
+.language-toggle:hover{background:rgba(255,255,255,.25)}
+.nav-actions .button,
+.nav-actions .button-small{background:#fff;color:#2455B5;box-shadow:0 6px 0 rgba(10,38,95,.16)}
+.nav-actions .button:hover,
+.nav-actions .button-small:hover{background:#EAF4FF;color:#173d78}
+@media (max-width:850px){
+  .nav-links{background:#2455B5}
+  .nav-links>a,
+  .drop-trigger{color:#fff}
+  .dropdown-menu{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.12)}
+  .dropdown-menu a{color:#fff}
+  .dropdown-menu a:hover{background:rgba(255,255,255,.16);color:#fff}
+}
+.hero-tagline{font-family:"Fredoka", sans-serif;font-size:clamp(21px, 2.3vw, 30px);font-weight:500;color:var(--royal);margin:-8px 0 15px}
+.hero-lead{color:#13161b;text-align:justify}
+/* HERO FULL IMAGE - MEDIUM SIZE */
+.hero{position:relative;height:580px;min-height:580px;display:flex;align-items:center;overflow:hidden;background:#2455B5}
+.hero-grid{display:block;position:static}
+.hero-visual{position:absolute;inset:0;width:100%;height:100%;margin:0;border-radius:0;overflow:hidden;z-index:0}
+.hero-visual > img{width:100%;height:100%;object-fit:cover;border-radius:0}
+.hero-copy{position:relative;z-index:2;max-width:570px;padding:40px 0}
+.hero{height:656px;min-height:656px}
+@media (max-width: 850px){
+  .hero{height:616px;min-height:616px}
+}
+@media (max-width: 560px){
+  .hero{height:596px;min-height:596px}
+}
+.hero-note{color:#494238}
+.hero-note span:first-child{color:#56b4f3}
+.hero-buttons .text-link,.hero-buttons .text-link{font-size:16px}
+/* WELCOME SECTION */
+.welcome{background:#d1e8ff}
+.welcome-grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:65px}
+#welcome .welcome-art{position:relative;width:100%;max-width:540px;margin:0 auto}
+#welcome .welcome-photo-frame{position:relative;width:100%;aspect-ratio:3 / 2}
+#welcome .welcome-photo{position:absolute;width:95.5%;height:95.5%;top:2.25%;left:2.25%;object-fit:cover;object-position:center;z-index:1}
+#welcome .welcome-frame-overlay{position:absolute;inset:0;width:100%;height:100%;object-fit:fill;z-index:2;pointer-events:none}
+/* RESPONSIVE */
+@media (max-width: 850px){
+  .welcome-grid{grid-template-columns:1fr;gap:35px}
+  .welcome-art{order:0}
+}
+#welcome .section-copy h2{font-size:34px;line-height:1.2;max-width:550px}
+#welcome .section-copy p{text-align:justify;text-justify:inter-word}
+#welcome .section-copy p{color:#2d3237}
+#welcome .eyebrow{font-size:16px}
+#welcome .welcome-tagline{font-size:16px;color:#2455B5}
+/* SECTION 3 - BACKGROUND IMAGE */
+#program-preview{position:relative;isolation:isolate;width:100%;min-height:850px;background-image:url("assets/program-background.png");background-size:100% 100%;background-position:center;background-repeat:no-repeat;overflow:hidden;padding-top:80px;padding-bottom:100px}
+/* CONTENT POSITION */
+#program-preview .container{position:relative;z-index:2}
+/* HIDE OLD DECORATIONS */
+#program-preview .program-decoration,
+#program-preview .program-bottom-decoration{display:none}
+/* TRANSPARENT PROGRAM CARDS */
+#program-preview .program-grid{display:grid;grid-template-columns:repeat(3, 1fr);gap:28px;margin-top:35px}
+#program-preview .program-card{background:transparent!important;border:none!important;box-shadow:none!important;min-height:300px;padding:25px;position:relative}
+/* REMOVE OLD CARD DECORATION */
+#program-preview .card-decoration{display:none}
+/* RESPONSIVE */
+@media (max-width: 850px){
+  #program-preview{background-size:cover;min-height:auto}
+  #program-preview .program-grid{grid-template-columns:1fr}
+  #program-preview .program-card{min-height:250px}
+}
+/* SECTION 3 - SMALLER BACKGROUND */
+#program-preview{min-height:640px;padding-top:50px;padding-bottom:55px;background-size:100% 100%;background-position:center}
+/* PROGRAM GRID */
+#program-preview .program-grid{margin-top:12px;gap:18px}
+/* PROGRAM CARD */
+#program-preview .program-card{min-height:220px;padding:12px 16px}
+/* ICON */
+#program-preview .card-icon{font-size:32px}
+#program-preview .program-card-top{margin-bottom:10px}
+/* AGE LABEL */
+#program-preview .age{font-size:9px;padding:4px 8px;letter-spacing:.7px}
+/* PROGRAM TITLE */
+#program-preview .program-card h3{font-size:19px;margin:8px 0 6px}
+/* DESCRIPTION */
+#program-preview .program-card p{font-size:12px;line-height:1.5}
+/* BUTTON */
+#program-preview .center-action{margin-top:18px}
+/* =================================
+   SECTION 3 - TYPOGRAPHY & LAYOUT
+================================= */
+/* JUDUL SECTION */
+#program-preview .section-heading{margin-bottom:25px;text-align:center}
+#program-preview .section-heading .eyebrow{font-size:12px;letter-spacing:1.8px;font-weight:800}
+#program-preview .section-heading h2{font-family:"Fredoka", sans-serif;font-size:clamp(30px, 3.2vw, 42px);line-height:1.2;margin:12px 0;color:#2455B5}
+#program-preview .section-heading p{max-width:650px;margin:0 auto;font-size:14px;line-height:1.7;text-align:center}
+/* POSISI KARTU */
+#program-preview .program-grid{display:grid;grid-template-columns:repeat(3, 1fr);gap:22px;margin-top:0}
+/* HILANGKAN IKON DAN NOMOR HTML
+   KARENA ILUSTRASI SUDAH ADA DI BACKGROUND */
+#program-preview .program-card-top,
+#program-preview .card-decoration{display:none}
+/* TATA LETAK TEKS DALAM PANEL */
+#program-preview .program-card{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:300px;padding:115px 24px 25px;background:transparent!important;border:none!important;box-shadow:none!important}
+/* LABEL USIA */
+#program-preview .program-card .age{font-family:"Nunito", sans-serif;font-size:11px;font-weight:800;letter-spacing:1px;padding:6px 14px;border-radius:30px;margin-bottom:10px}
+/* NAMA PROGRAM */
+#program-preview .program-card h3{font-family:"Fredoka", sans-serif;font-size:clamp(20px, 2vw, 25px);line-height:1.25;color:#2455B5;margin:5px 0 10px}
+/* DESKRIPSI PROGRAM */
+#program-preview .program-card p{font-family:"Nunito", sans-serif;font-size:13px;line-height:1.7;color:#52647A;max-width:290px;margin:0 auto}
+/* TOMBOL */
+#program-preview .center-action{margin-top:5px;text-align:center}
+/* RESPONSIVE */
+@media (max-width: 850px){
+  #program-preview .program-grid{grid-template-columns:1fr}
+  #program-preview .program-card{min-height:280px;padding-top:110px}
+}
+/* SECTION 3 - FINAL TEXT POSITION */
+#program-preview .program-card{justify-content:flex-start;padding-top:60px;padding-left:20px;padding-right:20px;min-height:300px}
+/* AGE LABEL - LEBIH BESAR */
+#program-preview .program-card .age{font-size:14px;font-weight:800;letter-spacing:1px;padding:7px 16px;margin-bottom:12px}
+/* PROGRAM TITLE */
+#program-preview .program-card h3{font-size:24px;margin:5px 0 10px;line-height:1.3}
+/* PROGRAM DESCRIPTION */
+#program-preview .program-card p{font-size:13px;line-height:1.65;max-width:290px;margin:0 auto}
+/* MENDEKATKAN LABEL USIA DAN JUDUL PROGRAM */
+#program-preview .program-card .age{margin-bottom:4px}
+#program-preview .program-card h3{margin-top:2px;margin-bottom:8px}
+/* SECTION 3 - DARK GRAY TEXT */
+/* Deskripsi di bawah judul utama */
+#program-preview .section-heading p{color:#2D3237}
+/* Deskripsi setiap program */
+#program-preview .program-card p{color:#2D3237}
+/* Pengaturan keterbacaan */
+#program-preview .program-card p,
+#program-preview .section-heading p{font-weight:500;line-height:1.7}
+#program-preview .program-card .age{margin-top:8px}
+#program-preview .center-action{margin-top:-30px}
+/* SECTION 4 - LEARNING APPROACH */
+.approach-section{position:relative;isolation:isolate;padding:75px 0 85px;background:#ffffff;overflow:hidden}
+/* HEADING */
+.approach-heading{text-align:center;max-width:1050px;margin:0 auto 35px}
+.approach-heading .eyebrow{display:inline-block;color:#4D83DB;font-family:"Nunito", sans-serif;font-size:13px;font-weight:800;letter-spacing:1.8px;margin-bottom:12px}
+.approach-heading h2{font-family:"Fredoka", sans-serif;font-size:clamp(30px, 3.5vw, 46px);line-height:1.2;color:#2455B5;margin:0 0 16px}
+.approach-heading p{max-width:850px;margin:0 auto;color:#2D3237;font-family:"Nunito", sans-serif;font-size:15px;line-height:1.8}
+/* LINK */
+.approach-link{display:inline-block;margin-top:20px;color:#2455B5;font-family:"Nunito", sans-serif;font-size:15px;font-weight:800;text-decoration:none;transition:0.3s ease}
+.approach-link:hover{color:#4D83DB;transform:translateX(4px)}
+/* LONG PANORAMA IMAGE */
+.approach-panorama{width:100%;height:280px;margin:0 auto;overflow:hidden;border-radius:35px;background:#EAF4FF;box-shadow:0 12px 35px rgba(62, 100, 160, 0.10)}
+.approach-panorama img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+/* RESPONSIVE */
+@media (max-width: 768px){
+  .approach-section{padding:55px 0}
+  .approach-heading{margin-bottom:28px}
+  .approach-heading p{font-size:14px}
+  .approach-panorama{height:190px;border-radius:22px}
+}
+.approach-panorama{width:100%;height:280px;margin:0 auto;overflow:hidden;border-radius:30px}
+.approach-panorama img{width:100%;height:100%;display:block;object-fit:cover;object-position:center}
+/* BACKGROUND SECTION 2 */
+#welcome{background-image:url("assets/welcome-background.png");background-size:100% 100%;background-position:center;background-repeat:no-repeat}
+/* MEMPERBESAR AREA SECTION 2 */
+#welcome{min-height:660px;padding-top:80px;padding-bottom:80px;background-size:100% 100%;background-position:center}
+/* SECTION 3 - BACKGROUND IMAGE */
+#program-preview{position:relative;isolation:isolate;background-image:url("assets/program-background.png");background-size:100% 100%;background-position:center;background-repeat:no-repeat}
+/* POSISI TEKS PROGRAM SECTION 3 */
+#program-preview .program-card{padding-top:140px}
+/* JARAK LABEL USIA DAN JUDUL */
+#program-preview .program-card .age{margin-top:8px;margin-bottom:2px}
+#program-preview .program-card h3{margin-top:2px;margin-bottom:5px}
+/* JARAK DESKRIPSI */
+#program-preview .program-card p{margin-top:0;line-height:1.45}
+/* GESER TEKS PLAYGROUP SAJA */
+#program-preview .program-card.card-blue .age,
+#program-preview .program-card.card-blue h3,
+#program-preview .program-card.card-blue p{transform:translateX(-50px)}
+/* GESER TEKS KINDERGARTEN B KE KANAN */
+#program-preview .program-card.card-pink .age,
+#program-preview .program-card.card-pink h3,
+#program-preview .program-card.card-pink p{transform:translateX(65px)}
+/* RAPATKAN JARAK TEKS SEMUA PROGRAM */
+#program-preview .program-card h3{margin-top:-5px;margin-bottom:4px}
+#program-preview .program-card p{margin-top:0;line-height:1.45}
+/* SECTION 4 - LEARNING APPROACH */
+.approach-section{position:relative;isolation:isolate;min-height:650px;padding:65px 0 80px;background-image:url("assets/learning-approach-panorama.png");background-size:100% 100%;background-position:center;background-repeat:no-repeat}
+/* HEADING */
+.approach-heading{text-align:center;max-width:1050px;margin:0 auto}
+.approach-heading .eyebrow{display:inline-block;color:#4D83DB;font-family:"Nunito", sans-serif;font-size:13px;font-weight:800;letter-spacing:1.8px;margin-bottom:12px}
+.approach-heading h2{font-family:"Fredoka", sans-serif;font-size:clamp(30px, 3.5vw, 46px);line-height:1.2;color:#2455B5;margin:0 0 16px}
+.approach-heading p{max-width:850px;margin:0 auto;color:#2D3237;font-family:"Nunito", sans-serif;font-size:15px;line-height:1.8}
+.approach-link{display:inline-block;margin-top:20px;color:#2455B5;font-family:"Nunito", sans-serif;font-weight:800;text-decoration:none}
+@media (max-width: 768px){
+  .approach-section{min-height:500px;padding:50px 0}
+}
+/* GALLERY SECTION BACKGROUND */
+#gallery{position:relative;isolation:isolate;background:radial-gradient(circle at 10% 15%, rgba(121, 184, 239, 0.18), transparent 25%),
+    radial-gradient(circle at 90% 85%, rgba(248, 223, 141, 0.22), transparent 25%),
+    linear-gradient(180deg, #EAF4FF 0%, #FFFDF7 55%, #F5F8ED 100%);overflow:hidden}
+/* SCHOOL LIFE PREVIEW */
+.school-life-preview{position:relative;isolation:isolate;min-height:88vh;box-sizing:border-box;display:flex;align-items:center;background-image:url("assets/NAMA-FILE-GAMBAR.png");background-size:100% 100%;background-position:center;background-repeat:no-repeat;padding-top:20px;padding-bottom:100px}
+/* POSISI JUDUL DAN KARTU */
+.school-life-preview .container{width:100%;transform:translate(-40px, -105px)}
+/* UKURAN KOTAK SCHOOL LIFE */
+.school-life-preview .life-grid{display:flex;justify-content:center;gap:18px}
+.school-life-preview .life-card{flex:0 1 250px;width:250px;max-width:250px;height:80px;min-height:80px;padding:10px 14px;box-sizing:border-box}
+/* UKURAN TULISAN */
+.school-life-preview .life-card strong{font-size:15px}
+.school-life-preview .life-card small{font-size:12px}
+/* GESER KHUSUS KOTAK OUR FACILITIES */
+.school-life-preview .life-facility{transform:translateX(-30px)}
+/* GESER KHUSUS KOTAK DAILY ACTIVITIES */
+.school-life-preview .life-activities{transform:translateX(80px)}
+/* GESER KHUSUS KOTAK OUR GALLERY */
+.school-life-preview .life-gallery{transform:translateX(20px)}
+/* NAIKKAN TULISAN OUR GALLERY */
+.school-life-preview .life-gallery strong,
+.school-life-preview .life-gallery small{position:relative;top:-20px}
+/* NAIKKAN TULISAN DAILY ACTIVITIES */
+.school-life-preview .life-activities strong,
+.school-life-preview .life-activities small{position:relative;top:-20px}
+
+
+.about-hero {
+    position: relative;
+    min-height: 420px;
+    padding: 100px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+    background:
+        linear-gradient(
+            rgba(234, 244, 255, 0.30),
+            rgba(234, 244, 255, 0.30)
+        ),
+        url("assets/about-hero-bg.png");
+
+    background-size: cover;
+    background-position: center 45%;
+    background-repeat: no-repeat;
+}
+
+.about-hero .container {
+    position: relative;
+    z-index: 1;
+    max-width: 850px;
+    margin: auto;
+}
+.about-hero .container p {
+    color: #000000 !important;
+}
+.about-hero .kicker {
+    color: #092e4e !important;
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+
+.about-hero .container,.section-intro{max-width:850px;margin:auto;text-align:center}
+.about-hero p,.section-intro p{max-width:730px;margin:0 auto;color:#52647a;line-height:1.85}
+.about-block{padding:78px 0}
+.kicker{display:inline-block;color:#4d83db;font-size:12px;font-weight:900;letter-spacing:1.6px;margin-bottom:12px}
+.story-grid,.philosophy-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.about-copy p{color:#46566a;line-height:1.9;text-align:justify}
+.story-art,.philosophy-art{min-height:300px;border-radius:36px 85px;background:linear-gradient(145deg,#b9dcfa,#eaf4ff 58%,#f9dde5);display:grid;place-items:center;padding:28px;text-align:center}
+.story-art div{max-width:340px;background:#ffffffd9;padding:30px;border-radius:25px}
+.story-art strong{display:block;font:500 25px Fredoka;color:#2455b5;margin:12px}
+.story-art p{font-size:13px;color:#52647a}
+.vision-mission,.team-section{background:#f5f9ff}
+.vm-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:35px}
+.vm-card{padding:34px;border-radius:26px;background:#e5f1ff}
+.vm-card.mission{background:#fff1d2}
+.vm-card h2{font-size:30px}
+.vm-card p,.vm-card li{color:#4e5e72;line-height:1.85}
+.vm-card ul{padding-left:20px}
+.philosophy-art{font-size:85px}
+.philosophy-points{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}
+.philosophy-points span{background:#f0f6ff;padding:13px;border-radius:14px;color:#34577f;font-size:13px;font-weight:800}
+.team-note{max-width:780px;margin:30px auto 0;padding:25px;background:white;border:1px dashed #9bbbe8;border-radius:20px;text-align:center;color:#52647a}
+.team-note strong{display:block;font:500 22px Fredoka;color:#2455b5;margin-bottom:6px}
+.highlights-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:35px}
+.highlight{padding:24px;border-radius:22px;background:#f0f6ff;border:1px solid #e2edff}
+.highlight:nth-child(2){background:#fff5dc}.highlight:nth-child(3){background:#fcecf0}.highlight:nth-child(4){background:#eef6ed}.highlight:nth-child(5){background:#f0edfb}.highlight:nth-child(6){background:#e8f6f8}
+.highlight span{font-size:28px}.highlight h3{font-size:20px;color:#2455b5;margin:10px 0}.highlight p{font-size:13px;line-height:1.75;color:#52647a;margin:0}
+@media(max-width:850px){.story-grid,.philosophy-grid,.vm-grid{grid-template-columns:1fr}.highlights-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.about-block{padding:58px 0}.highlights-grid,.philosophy-points{grid-template-columns:1fr}.vm-card{padding:25px}}
+
+/* ABOUT LUMIÈRE SECTION */
+
+.about-intro {
+    position: relative;
+    padding: 100px 0;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0),
+            rgba(255, 255, 255, 0)
+        ),
+        url("./assets/about-intro-bg.jpg");
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+/* OUR VISION & MISSION */
+
+.vision-mission {
+    position: relative;
+    min-height: 100vh;
+    padding: 90px 7%;
+    display: flex;
+    align-items: center;
+    background-image: url("./assets/vision-mission-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.vision-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(234, 244, 255, 0);
+}
+
+.vision-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.vision-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.vision-heading .section-number {
+    display: inline-block;
+    color: #2455B5;
+    font-family: 'Nunito', sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.vision-heading h2 {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 46px;
+    color: #26364A;
+    margin-bottom: 12px;
+}
+
+.vision-heading h2 em {
+    color: #4D83DB;
+}
+
+.vision-heading p {
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    color: #34443a;
+}
+
+.vision-content {
+    display: grid;
+    grid-template-columns: 0.85fr 1fr;
+    gap: 40px;
+    align-items: start;
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+.vision-card,
+.mission-card {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 25px 28px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: 0;
+}
+
+.vision-card {
+    background: rgba(234, 244, 255, 0.94);
+}
+
+.mission-card {
+    background: rgba(255, 250, 230, 0.94);
+}
+
+.vision-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    color: #4D83DB;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.vision-card h3,
+.mission-card h3 {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 28px;
+    color: #2455B5;
+    margin-bottom: 18px;
+}
+
+.vision-card p,
+.mission-card li {
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #34443a;
+}
+
+.mission-card ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.mission-card li {
+    padding-left: 5px;
+    margin-bottom: 12px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+    .vision-mission {
+        min-height: auto;
+        padding: 75px 6%;
+    }
+
+    .vision-heading h2 {
+        font-size: 34px;
+    }
+
+    .vision-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .vision-card,
+    .mission-card {
+        padding: 25px;
+    }
+}
+
+.about-intro-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 55px;
+    align-items: center;
+}
+
+.about-intro-text h2 {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 42px;
+    color: #26364A;
+    margin: 12px 0 18px;
+}
+
+.about-intro-text h2 em {
+    color: #4D83DB;
+}
+
+.about-intro-text p {
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    line-height: 1.9;
+    color: #4A4A4A;
+    margin: 0;
+    text-align: justify !important;
+    text-justify: inter-word;
+}
+.about-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.stat-card {
+    min-height: 110px;
+    padding: 16px 18px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    transition: transform 0.3s ease;
+}
+
+.stat-number {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.stat-label {
+    font-family: 'Nunito', sans-serif;
+    font-size: 0Spx;
+    font-weight: 700;
+}
+
+.stat-card {
+    min-height: 145px;
+    padding: 24px;
+    border-radius: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 9px;
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-blue {
+    background: #4D83DB;
+    color: #ffffff;
+}
+
+.stat-light {
+    background: #EAF4FF;
+    color: #2455B5;
+}
+
+.stat-number {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 34px;
+    font-weight: 600;
+}
+
+.stat-label {
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+}
+/* WARNA STATISTIK REGGIO EMILIA DAN SISWA AKTIF */
+.about-stats .stat-card:nth-child(2) .stat-number,
+.about-stats .stat-card:nth-child(3) .stat-number {
+    color: #f8fcff;
+}
+.about-stats .stat-card:nth-child(2),
+.about-stats .stat-card:nth-child(3) {
+    background-color: #97bff3;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+    .about-intro-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+}
+
+@media (max-width: 560px) {
+    .about-intro {
+        padding: 60px 0;
+    }
+
+    .about-stats {
+        gap: 12px;
+    }
+
+    .stat-card {
+        min-height: 120px;
+        padding: 17px;
+    }
+
+    .stat-number {
+        font-size: 27px;
+    }
+}
+
+/* EDUCATIONAL PHILOSOPHY */
+
+.philosophy-section {
+    position: relative;
+    min-height: 100vh;
+    padding: 90px 7%;
+    box-sizing: border-box;
+
+    background-image:
+        linear-gradient(
+            to right,
+            rgba(255,255,255,0) 0%,
+            rgba(255,255,255,0) 38%,
+            rgba(255,255,255,0) 65%,
+            rgba(255,255,255,0) 100%
+        ),
+        url("./assets/philosophy-bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.philosophy-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: calc(100vh - 180px);
+}
+
+.philosophy-content {
+    width: 58%;
+    max-width: 680px;
+    background: transparent;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+}
+
+.philosophy-content .kicker {
+    font-family: 'Nunito', sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #2455B5;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.philosophy-content h2 {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 43px;
+    line-height: 1.2;
+    color: #26364A;
+    margin-bottom: 22px;
+}
+
+.philosophy-content h2 em {
+    color: #4D83DB;
+}
+
+.philosophy-content > p {
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+    line-height: 1.85;
+    color: #34443a;
+    text-align: justify;
+    margin-bottom: 16px;
+}
+
+.philosophy-principles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 28px;
+}
+
+.principle-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 15px;
+    background: rgba(255,255,255,0.72);
+    border-radius: 16px;
+    border: 1px solid rgba(77,131,219,0.15);
+}
+
+.principle-number {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 19px;
+    font-weight: 600;
+    color: #4D83DB;
+}
+
+.principle-item h3 {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 15px;
+    color: #26364A;
+    margin: 0 0 5px;
+}
+
+.principle-item p {
+    font-family: 'Nunito', sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #68788B;
+    margin: 0;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+    .philosophy-section {
+        min-height: auto;
+        padding: 70px 6%;
+        background-position: center;
+    }
+
+    .philosophy-container {
+        min-height: auto;
+        justify-content: center;
+    }
+
+    .philosophy-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .philosophy-content h2 {
+        font-size: 34px;
+    }
+
+    .philosophy-principles {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* OUR TEAM ORGANIZATION CHART */
+
+.team-section {
+    padding: 45px 5% 90px;
+    background: #F4F8FF;
+}
+.team-chart {
+    width: 100%;
+    max-width: 1250px;
+    margin: 45px auto 0;
+    padding: 15px;
+    background: #FFFFFF;
+    border-radius: 24px;
+    box-shadow: 0 12px 35px rgba(36, 85, 181, 0.10);
+    overflow: hidden;
+}
+
+.team-chart img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 14px;
+}
+
+@media (max-width: 768px) {
+    .team-section {
+        padding: 65px 5%;
+    }
+
+    .team-chart {
+        padding: 8px;
+        margin-top: 30px;
+        border-radius: 15px;
+        overflow-x: auto;
+    }
+
+    .team-chart img {
+        width: 900px;
+        max-width: none;
+    }
+}
+/* FIX SCHOOL HIGHLIGHTS BOTTOM SPACE */
+
+#highlights {
+    height: auto;
+    min-height: auto;
+    padding-bottom: 90px;
+    overflow: visible;
+}
+
+#highlights .highlights-grid {
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   PROGRAMS PAGE
+========================= */
+
+.programs-intro {
+    padding: 78px 0 55px;
+    text-align: center;
+}
+
+.programs-intro .container {
+    max-width: 850px;
+}
+
+.programs-intro h2,
+.program-section h2 {
+    font-family: 'Fredoka', sans-serif;
+    color: #26364A;
+    font-size: 42px;
+    line-height: 1.2;
+    margin: 8px 0 16px;
+}
+
+.programs-intro h2 em,
+.program-section h2 em {
+    color: #4D83DB;
+}
+
+.programs-intro p {
+    color: #52647A;
+    line-height: 1.9;
+    margin: 0 auto;
+    max-width: 760px;
+}
+
+.program-section {
+    padding: 72px 0;
+}
+
+.program-section:nth-of-type(even) {
+    background: #EAF4FF;
+}
+
+/* MAIN LAYOUT */
+
+.program-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 48px;
+    align-items: center;
+}
+
+.program-layout.reverse {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+}
+
+/* IMAGE AREA */
+
+.program-art {
+    min-height: 380px;
+    width: 100%;
+    border-radius: 36px 80px 36px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(
+        145deg,
+        #B9DCFA,
+        #EAF4FF 58%,
+        #F9DDE5
+    );
+}
+
+.program-art.gold {
+    background: linear-gradient(
+        145deg,
+        #F8DF8D,
+        #FFF5DC 60%,
+        #F8E1D2
+    );
+}
+
+.program-art.lavender {
+    background: linear-gradient(
+        145deg,
+        #C8D5F5,
+        #E9E2F5 60%,
+        #EAF4FF
+    );
+}
+
+.program-art img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.program-art .art-symbol {
+    font-size: 104px;
+}
+
+.program-art .art-caption {
+    position: absolute;
+    z-index: 2;
+    bottom: 22px;
+    left: 22px;
+    right: 22px;
+    background: rgba(255,255,255,.88);
+    padding: 13px 18px;
+    border-radius: 18px;
+    color: #2455B5;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* TEXT AREA */
+
+.program-copy {
+    width: 100%;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.program-copy .kicker {
+    display: block;
+    color: #4D83DB;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.program-copy h2 {
+    font-family: 'Fredoka', sans-serif;
+    color: #26364A;
+    font-size: 42px;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.program-copy h2 em {
+    color: #4D83DB;
+    font-style: italic;
+}
+
+.program-copy p {
+    font-family: 'Nunito', sans-serif;
+    color: #52647A;
+    font-size: 15px;
+    line-height: 1.8;
+    text-align: left;
+    word-spacing: normal;
+    letter-spacing: normal;
+    margin: 0;
+}
+
+/* PROGRAM POINTS */
+
+.program-points {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    margin-top: 6px;
+}
+
+.program-point {
+    background: #F0F6FF;
+    border: 1px solid #E2EDFF;
+    border-radius: 16px;
+    padding: 17px;
+    color: #52647A;
+    font-family: 'Nunito', sans-serif;
+    font-size: 13px;
+    line-height: 1.65;
+    min-width: 0;
+}
+
+.program-point strong {
+    display: block;
+    color: #2455B5;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+/* CLOSING SECTION */
+
+.program-note {
+    padding: 72px 0;
+    background: #EAF4FF;
+}
+
+.program-note-card {
+    max-width: 920px;
+    margin: auto;
+    text-align: center;
+    padding: 42px 35px;
+    background: #fff;
+    border-radius: 30px;
+    box-shadow: 0 12px 35px rgba(36,85,181,.08);
+}
+
+.program-note-card h2 {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+    color: #2455B5;
+    margin: 0 0 12px;
+}
+
+.program-note-card p {
+    color: #52647A;
+    line-height: 1.85;
+    margin: 0 auto;
+    max-width: 760px;
+}
+
+/* TABLET */
+
+@media (max-width: 850px) {
+    .program-layout,
+    .program-layout.reverse {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .program-art {
+        min-height: 320px;
+    }
+
+    .program-copy {
+        order: 1;
+    }
+
+    .program-art {
+        order: 0;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 560px) {
+    .programs-intro {
+        padding: 58px 0 35px;
+    }
+
+    .programs-intro h2,
+    .program-section h2 {
+        font-size: 34px;
+    }
+
+    .program-section {
+        padding: 55px 0;
+    }
+
+    .program-art {
+        min-height: 260px;
+        border-radius: 28px 55px 28px 55px;
+    }
+
+    .program-copy h2 {
+        font-size: 32px;
+    }
+
+    .program-points {
+        grid-template-columns: 1fr;
+    }
+
+    .program-note {
+        padding: 55px 0;
+    }
+
+    .program-note-card {
+        padding: 30px 22px;
+    }
+}
+
+
+/* LEARNING PAGE */
+.learning-hero{position:relative;min-height:390px;padding:95px 20px;display:flex;align-items:center;justify-content:center;text-align:center;background:linear-gradient(rgba(234,244,255,.38),rgba(234,244,255,.38)),url("assets/learning-hero.jpg");background-size:cover;background-position:center 45%;background-repeat:no-repeat}
+.learning-hero .container{position:relative;z-index:1;max-width:850px;margin:auto}
+.learning-hero .kicker{color:#2455B5;font-size:14px;font-weight:900;letter-spacing:2px}
+.learning-hero h1{font-family:'Fredoka',sans-serif;color:#26364A;font-size:clamp(38px,6vw,58px);line-height:1.12;margin:12px 0}
+.learning-hero h1 em{color:#4D83DB;font-style:normal}
+.learning-hero p{max-width:720px;margin:0 auto;color:#000000;line-height:1.85;font-size:16px}
+.learning-section{padding:76px 0}
+.learning-section.soft{background:#EAF4FF}
+.learning-section.tint{background:#F5F8FF}
+.learning-heading{text-align:center;max-width:790px;margin:0 auto 38px}
+.learning-heading .kicker{color:#4D83DB;font-size:12px;font-weight:900;letter-spacing:2px}
+.learning-heading h2{font-family:'Fredoka',sans-serif;color:#26364A;font-size:clamp(32px,4vw,42px);line-height:1.2;margin:9px 0 13px}
+.learning-heading h2 em{color:#4D83DB}
+.learning-heading p{color:#52647A;line-height:1.85;margin:0}
+.learning-approach-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:stretch}
+.approach-feature{background:#fff;border-radius:28px;padding:34px;box-shadow:0 12px 35px rgba(36,85,181,.07)}
+.approach-feature h3,.learning-card h3,.schedule-card h3,.extra-card h3{font-family:'Fredoka',sans-serif;color:#2455B5;font-size:23px;margin:0 0 12px}
+.approach-feature p{color:#52647A;line-height:1.85;margin:0 0 14px}
+.approach-side{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.approach-point{background:#DCEBFF;border-radius:20px;padding:23px;display:flex;flex-direction:column;justify-content:center;min-height:150px}
+.approach-point:nth-child(2){background:#FCE9EC}
+.approach-point:nth-child(3){background:#FFF3D6}
+.approach-point:nth-child(4){background:#E8E3F7}
+.approach-point strong{font-family:'Fredoka',sans-serif;color:#26364A;font-size:17px;margin-bottom:6px}
+.approach-point span{color:#52647A;font-size:13px;line-height:1.65}
+.learning-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.learning-card{background:#fff;border:1px solid #E5EEFA;border-radius:22px;padding:25px;box-shadow:0 10px 28px rgba(36,85,181,.05)}
+.learning-card .card-number{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:14px;background:#EAF4FF;color:#2455B5;font-family:'Fredoka',sans-serif;font-weight:700;margin-bottom:17px}
+.learning-card p{color:#52647A;line-height:1.75;font-size:14px;margin:0}
+.schedule-wrap{max-width:900px;margin:0 auto;display:grid;gap:13px}
+.schedule-item{display:grid;grid-template-columns:145px 1fr;gap:20px;align-items:center;background:#fff;border-radius:17px;padding:18px 22px;border:1px solid #E5EEFA}
+.schedule-time{font-family:'Fredoka',sans-serif;color:#2455B5;font-weight:600;font-size:17px}
+.schedule-detail strong{display:block;color:#26364A;font-family:'Fredoka',sans-serif;font-size:17px;margin-bottom:3px}
+.schedule-detail span{color:#68788B;font-size:14px;line-height:1.6}
+.extra-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.extra-card{background:#fff;border-radius:22px;padding:27px;border:1px solid #E5EEFA}
+.extra-card .extra-label{font-size:11px;font-weight:900;letter-spacing:1.5px;color:#4D83DB;margin-bottom:12px;display:block}
+.extra-card p{font-size:14px;line-height:1.75;color:#52647A;margin:0}
+.learning-note{padding:65px 0;background:#EAF4FF}
+.learning-note-box{max-width:900px;margin:auto;padding:38px 30px;background:#fff;border-radius:28px;text-align:center;box-shadow:0 12px 35px rgba(36,85,181,.07)}
+.learning-note-box h2{font-family:'Fredoka',sans-serif;color:#2455B5;font-size:30px;margin:0 0 10px}
+.learning-note-box p{max-width:740px;margin:0 auto;color:#52647A;line-height:1.85}
+@media(max-width:850px){.learning-approach-grid{grid-template-columns:1fr}.learning-cards,.extra-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.learning-hero{min-height:330px;padding:72px 20px}.learning-section{padding:55px 0}.approach-feature{padding:25px}.approach-side{grid-template-columns:1fr 1fr}.learning-cards,.extra-grid{grid-template-columns:1fr}.schedule-item{grid-template-columns:1fr;gap:5px;padding:17px}.learning-note{padding:50px 0}.learning-note-box{padding:28px 20px}}
+
+
+/* SCHOOL LIFE PAGE */
+.school-hero{position:relative;min-height:390px;padding:95px 20px;display:flex;align-items:center;justify-content:center;text-align:center;background:linear-gradient(rgba(234,244,255,.42),rgba(234,244,255,.42)),url("assets/life-at-lumiere-hero.jpg");background-size:cover;background-position:center 45%;background-repeat:no-repeat}
+.school-hero .container{position:relative;z-index:1;max-width:850px;margin:auto}
+.school-hero .kicker{color:#2455B5;font-size:14px;font-weight:800;letter-spacing:2px}
+.school-hero h1{font-family:'Fredoka',sans-serif;color:#26364A;font-size:clamp(38px,6vw,58px);line-height:1.15;margin:12px 0}
+.school-hero h1 em{color:#4D83DB}
+.school-hero p{max-width:720px;margin:0 auto;color:#030303;line-height:1.85;font-size:16px}
+.school-intro{padding:75px 0 35px;text-align:center}
+.school-intro .container{max-width:850px}
+.school-intro h2,.facility-copy h2,.gallery-heading h2{font-family:'Fredoka',sans-serif;color:#26364A;font-size:42px;line-height:1.2;margin:8px 0 15px}
+.school-intro h2 em,.facility-copy h2 em,.gallery-heading h2 em{color:#4D83DB}
+.school-intro p,.gallery-heading p{color:#52647A;line-height:1.85;margin:0 auto;max-width:760px}
+.facilities-section{padding:55px 0 75px}
+.facilities-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.facility-card{background:#fff;border:1px solid #E4EDFA;border-radius:24px;overflow:hidden;box-shadow:0 12px 30px rgba(36,85,181,.07)}
+.facility-image{height:210px;position:relative;overflow:hidden;background:#EAF4FF}
+.facility-image img{width:100%;height:100%;object-fit:cover;display:block}
+.facility-copy{padding:21px 21px 24px}
+.facility-copy h3{font-family:'Fredoka',sans-serif;font-size:21px;color:#26364A;margin:0 0 8px}
+.facility-copy p{font-family:'Nunito',sans-serif;color:#43546a;font-size:14px;line-height:1.75;margin:0}
+.gallery-section{padding:75px 0;background:#EAF4FF}
+.gallery-heading{text-align:center;max-width:850px;margin:0 auto 34px}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.gallery-item{position:relative;overflow:hidden;border-radius:22px;background:#DCECFB;aspect-ratio:4/3}
+.gallery-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s ease}
+.gallery-item:hover img{transform:scale(1.04)}
+.gallery-caption{position:absolute;left:12px;right:12px;bottom:12px;padding:10px 14px;border-radius:14px;background:rgba(255,255,255,.92);color:#26364A;font-family:'Fredoka',sans-serif;font-size:16px;font-weight:500}
+.school-note{padding:70px 0}
+.school-note-card{max-width:900px;margin:auto;text-align:center;padding:40px 32px;background:#F0F6FF;border:1px solid #E2EDFF;border-radius:28px}
+.school-note-card h2{font:600 30px 'Fredoka',sans-serif;color:#2455B5;margin:0 0 12px}
+.school-note-card p{color:#43546A;line-height:1.85;max-width:740px;margin:0 auto}
+@media(max-width:850px){.facilities-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.school-hero{min-height:330px;padding:75px 20px}.school-intro{padding:55px 0 25px}.school-intro h2,.facility-copy h2,.gallery-heading h2{font-size:34px}.facilities-section,.gallery-section{padding:50px 0}.facilities-grid,.gallery-grid{grid-template-columns:1fr}.facility-image{height:220px}.school-note{padding:50px 0}.school-note-card{padding:30px 22px}}
+
+
+.parent-hero{min-height:350px;padding:85px 20px;display:flex;align-items:center;justify-content:center;text-align:center;background:linear-gradient(rgba(234,244,255,.78),rgba(234,244,255,.78)),url("assets/parent-info-hero.jpg") center/cover no-repeat}.parent-hero .container{max-width:850px;margin:auto}.kicker{color:#2455B5;font-size:14px;font-weight:900;letter-spacing:2px}.parent-hero h1,.parent-heading h2{font-family:Fredoka,sans-serif;color:#26364A}.parent-hero h1{font-size:clamp(38px,6vw,58px);margin:12px 0}.parent-hero h1 em,.parent-heading h2 em{color:#4D83DB}.parent-hero p{max-width:740px;margin:auto;color:#172334;line-height:1.85}.parent-section{padding:70px 0}.parent-section.soft{background:#EAF4FF}.parent-heading{text-align:center;max-width:850px;margin:0 auto 34px}.parent-heading h2{font-size:42px;margin:9px 0 14px}.parent-heading p{color:#52647A;line-height:1.85}.info-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.info-card,.fee-panel,.fee-summary,.faq-list details{background:#fff;border:1px solid #E1EBF8;border-radius:22px;padding:23px;box-shadow:0 10px 28px rgba(36,85,181,.06)}.info-card h3,.calendar-item h3{font:600 21px Fredoka,sans-serif;color:#26364A;margin:0 0 9px}.info-card p,.info-card li{font-size:14px;line-height:1.75;color:#52647A}.calendar-list{display:grid;gap:14px;max-width:850px;margin:auto}.calendar-item{display:grid;grid-template-columns:105px 1fr;gap:18px;align-items:center;background:#fff;border:1px solid #E1EBF8;border-radius:18px;padding:18px 22px}.calendar-date{background:#EAF4FF;color:#2455B5;border-radius:14px;text-align:center;padding:12px 8px;font:600 16px Fredoka,sans-serif}.calendar-date small{display:block;font:800 11px Nunito,sans-serif}.calendar-item p{margin:0;color:#52647A;font-size:14px;line-height:1.6}.fee-layout{display:grid;grid-template-columns:1.05fr .95fr;gap:24px;align-items:start}.fee-panel h3,.fee-summary h3{font:600 23px Fredoka,sans-serif;color:#26364A;margin:0 0 18px}.fee-field{margin-bottom:22px}.fee-field>label{display:block;font-weight:900;color:#26364A;margin-bottom:9px}.fee-field select{width:100%;padding:13px 15px;border:1px solid #C9D9EF;border-radius:12px;background:white;color:#26364A;font:700 15px Nunito,sans-serif}.extra-list{display:grid;grid-template-columns:1fr 1fr;gap:10px}.extra-option{display:flex;gap:9px;background:#F5F9FF;border:1px solid #E1EBF8;border-radius:12px;padding:11px;color:#34465B;font-size:14px;font-weight:700}.extra-option input{accent-color:#2455B5}.extra-option small{display:block;color:#2455B5;font-size:11px;font-weight:900;margin-top:3px}.fee-summary{background:#EAF4FF;position:sticky;top:105px}.fee-summary p{font-size:13px;color:#52647A;line-height:1.65}.fee-row,.fee-total{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid #D4E3F5;color:#43546A;font-size:14px}.fee-row strong{text-align:right;color:#26364A}.fee-total{border:0;margin-top:8px;color:#2455B5;font-weight:900}.fee-total output{font:600 25px Fredoka,sans-serif}.fee-disclaimer{font-size:12px!important}.faq-list{max-width:900px;margin:auto;display:grid;gap:12px}.faq-list details{padding:17px 20px}.faq-list summary{cursor:pointer;font:600 18px Fredoka,sans-serif;color:#26364A}.faq-list details p{color:#52647A;font-size:14px;line-height:1.8}.parent-note{max-width:900px;margin:auto;text-align:center;background:#F0F6FF;border:1px solid #E2EDFF;border-radius:24px;padding:34px}.parent-note h2{font:600 29px Fredoka,sans-serif;color:#2455B5}.parent-note p{color:#43546A;line-height:1.8}
+@media(max-width:850px){.info-grid{grid-template-columns:repeat(2,1fr)}.fee-layout{grid-template-columns:1fr}.fee-summary{position:static}}@media(max-width:560px){.parent-hero{min-height:320px;padding:65px 20px}.parent-section{padding:50px 0}.parent-heading h2{font-size:34px}.info-grid,.extra-list{grid-template-columns:1fr}.calendar-item{grid-template-columns:78px 1fr;padding:14px}.fee-panel,.fee-summary{padding:20px}}
+
+
+.contact-hero{min-height:330px;padding:82px 20px;display:flex;align-items:center;justify-content:center;text-align:center;background:linear-gradient(rgba(234,244,255,.82),rgba(234,244,255,.82)),url("assets/contact-hero.jpg") center/cover no-repeat}
+.contact-hero .container{max-width:850px;margin:auto}
+.contact-kicker{color:#2455B5;font-size:14px;font-weight:900;letter-spacing:2px}
+.contact-hero h1{font:600 clamp(38px,6vw,58px)/1.15 Fredoka,sans-serif;color:#26364A;margin:12px 0}
+.contact-hero h1 em,.contact-heading h2 em{color:#4D83DB}
+.contact-hero p{max-width:720px;margin:auto;color:#172334;line-height:1.85}
+.contact-section{padding:72px 0}
+.contact-section.soft{background:#EAF4FF}
+.contact-heading{text-align:center;max-width:820px;margin:0 auto 35px}
+.contact-heading h2{font:600 clamp(32px,4vw,42px)/1.2 Fredoka,sans-serif;color:#26364A;margin:9px 0 14px}
+.contact-heading p{color:#52647A;line-height:1.85;margin:0}
+.contact-layout{display:grid;grid-template-columns:.85fr 1.15fr;gap:24px;align-items:stretch}
+.contact-card,.map-card,.message-card{background:#fff;border:1px solid #E1EBF8;border-radius:24px;box-shadow:0 12px 30px rgba(36,85,181,.07);overflow:hidden}
+.contact-card{padding:27px}
+.contact-card h3,.message-card h3{font:600 23px Fredoka,sans-serif;color:#26364A;margin:0 0 20px}
+.contact-detail{display:flex;gap:14px;padding:15px 0;border-bottom:1px solid #E8EFF8}
+.contact-detail:last-child{border-bottom:0}
+.contact-icon{width:42px;height:42px;flex:0 0 42px;display:grid;place-items:center;border-radius:13px;background:#EAF4FF;color:#2455B5;font-size:19px}
+.contact-detail strong{display:block;color:#26364A;font-size:15px;margin-bottom:3px}
+.contact-detail p,.contact-detail a{margin:0;color:#52647A;font-size:14px;line-height:1.7;text-decoration:none}
+.map-card{min-height:390px;display:flex;flex-direction:column}
+.map-card iframe{width:100%;height:100%;min-height:390px;border:0;display:block}
+.map-caption{padding:14px 18px;color:#52647A;font-size:13px;line-height:1.6}
+.map-caption strong{color:#26364A}
+.message-card{max-width:850px;margin:auto;padding:28px}
+.message-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.message-field{display:flex;flex-direction:column;gap:7px}
+.message-field.full{grid-column:1/-1}
+.message-field label{font-weight:900;color:#26364A;font-size:14px}
+.message-field input,.message-field textarea{width:100%;padding:13px 15px;border:1px solid #C9D9EF;border-radius:12px;font:600 15px Nunito,sans-serif;color:#26364A;background:#fff}
+.message-field textarea{min-height:135px;resize:vertical}
+.message-help{font-size:12px;color:#68788B;line-height:1.6;margin:14px 0 0}
+.contact-note{max-width:900px;margin:auto;text-align:center;background:#F0F6FF;border:1px solid #E2EDFF;border-radius:24px;padding:34px}
+.contact-note h2{font:600 29px Fredoka,sans-serif;color:#2455B5;margin:0 0 10px}
+.contact-note p{color:#43546A;line-height:1.8;margin:0}
+@media(max-width:850px){.contact-layout{grid-template-columns:1fr}.map-card,.map-card iframe{min-height:350px}}
+@media(max-width:560px){.contact-hero{min-height:300px;padding:60px 20px}.contact-section{padding:50px 0}.contact-card,.message-card{padding:21px}.message-grid{grid-template-columns:1fr}.message-field.full{grid-column:auto}}
+
+
+.admission-hero{min-height:350px;padding:85px 20px;display:flex;align-items:center;justify-content:center;text-align:center;background:linear-gradient(rgba(234,244,255,.84),rgba(234,244,255,.84)),url("assets/admissions-hero.jpg") center/cover no-repeat}
+.admission-hero .inner{max-width:850px;margin:auto}.eyebrow{color:#2455B5;font-size:13px;font-weight:900;letter-spacing:2px}
+.admission-hero h1{font:600 clamp(38px,6vw,58px)/1.15 Fredoka,sans-serif;color:#26364A;margin:12px 0}
+.admission-hero h1 em,.section-heading h2 em{color:#4D83DB}.admission-hero p{max-width:730px;margin:auto;color:#26364A;line-height:1.85}
+.admission-section{padding:70px 0}.admission-section.soft{background:#EAF4FF}
+.section-heading{text-align:center;max-width:800px;margin:0 auto 36px}.section-heading h2{font:600 clamp(30px,4vw,42px)/1.2 Fredoka,sans-serif;color:#26364A;margin:10px 0 12px}.section-heading p{color:#586A80;line-height:1.8;margin:0}
+.admission-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.info-card{background:#fff;border:1px solid #E1EBF8;border-radius:22px;padding:24px;box-shadow:0 10px 26px rgba(36,85,181,.06)}
+.info-card .number{width:42px;height:42px;border-radius:14px;display:grid;place-items:center;background:#EAF4FF;color:#2455B5;font:600 20px Fredoka,sans-serif;margin-bottom:15px}
+.info-card h3{font:600 21px Fredoka,sans-serif;color:#26364A;margin:0 0 8px}.info-card p,.info-card li{color:#586A80;font-size:14px;line-height:1.75}
+.info-card ul{padding-left:19px;margin:9px 0 0}
+.program-card{background:#fff;border:1px solid #E1EBF8;border-radius:22px;padding:25px;box-shadow:0 10px 26px rgba(36,85,181,.06)}
+.program-card h3{font:600 23px Fredoka,sans-serif;color:#2455B5;margin:0 0 7px}.program-card p{color:#586A80;line-height:1.75;font-size:14px;margin:0}
+.program-age{display:inline-block;background:#EAF4FF;color:#2455B5;padding:6px 11px;border-radius:30px;font-size:12px;font-weight:900;margin-bottom:13px}
+.steps{max-width:900px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.step{background:#fff;border-radius:18px;padding:20px 16px;border:1px solid #E1EBF8}.step b{display:block;font:600 25px Fredoka,sans-serif;color:#4D83DB;margin-bottom:8px}.step h3{font:600 18px Fredoka,sans-serif;color:#26364A;margin:0 0 7px}.step p{font-size:13px;color:#586A80;line-height:1.7;margin:0}
+.form-shell{max-width:900px;margin:auto;background:#fff;border:1px solid #E1EBF8;border-radius:24px;padding:30px;box-shadow:0 12px 30px rgba(36,85,181,.07)}
+.form-shell h3{font:600 23px Fredoka,sans-serif;color:#26364A;margin:0 0 20px}.form-group-title{font:600 18px Fredoka,sans-serif;color:#2455B5;margin:25px 0 14px;padding-bottom:9px;border-bottom:1px solid #E5EDF8}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.field{display:flex;flex-direction:column;gap:7px}.field.full{grid-column:1/-1}
+.field label{font-weight:900;font-size:14px;color:#26364A}.field input,.field select,.field textarea{width:100%;padding:12px 14px;border:1px solid #C9D9EF;border-radius:12px;background:#fff;color:#26364A;font:600 14px Nunito,sans-serif}.field textarea{min-height:100px;resize:vertical}
+.form-note{font-size:12px;color:#718096;line-height:1.65;margin:14px 0 20px}.form-status{display:none;margin-top:14px;padding:13px 15px;border-radius:12px;background:#EAF4FF;color:#2455B5;font-size:14px;line-height:1.6}
+.closing{max-width:900px;margin:auto;text-align:center;padding:34px;background:#F0F6FF;border:1px solid #E2EDFF;border-radius:24px}.closing h2{font:600 29px Fredoka,sans-serif;color:#2455B5;margin:0 0 9px}.closing p{color:#52647A;line-height:1.8;margin:0}
+@media(max-width:850px){.admission-grid{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.admission-hero{min-height:300px;padding:60px 20px}.admission-section{padding:50px 0}.admission-grid,.steps,.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.form-shell{padding:21px}}
+
+
+.dev-hero{padding:78px 20px 55px;text-align:center;background:linear-gradient(135deg,#EAF4FF,#DCEBFF)}
+.dev-hero .eyebrow,.dev-kicker{color:#2455B5;font-size:13px;font-weight:900;letter-spacing:2px}
+.dev-hero h1{font:600 clamp(38px,6vw,56px)/1.15 Fredoka,sans-serif;color:#26364A;margin:12px 0}
+.dev-hero h1 em{color:#4D83DB}
+.dev-hero p{max-width:680px;margin:auto;color:#52647A;line-height:1.85}
+.dev-section{padding:70px 0}
+.dev-profile{max-width:980px;margin:auto;display:grid;grid-template-columns:.85fr 1.15fr;gap:38px;align-items:center}
+.dev-photo-wrap{background:#EAF4FF;border-radius:30px;padding:18px;box-shadow:0 14px 34px rgba(36,85,181,.09)}
+.dev-photo{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;border-radius:22px;background:#DCEBFF}
+.dev-photo-note{font-size:12px;color:#68788B;text-align:center;margin:12px 4px 0}
+.dev-info h2{font:600 clamp(30px,4vw,42px)/1.2 Fredoka,sans-serif;color:#26364A;margin:9px 0}
+.dev-role{display:inline-block;background:#EAF4FF;color:#2455B5;border-radius:30px;padding:7px 13px;font-size:13px;font-weight:900;margin:5px 0 16px}
+.dev-info p{color:#586A80;line-height:1.9;margin:0 0 14px;text-align:justify}
+.dev-details{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
+.dev-detail{background:#F5F9FF;border:1px solid #E4EDF9;border-radius:15px;padding:14px}
+.dev-detail small{display:block;color:#75849A;font-weight:800;font-size:11px;letter-spacing:.7px;text-transform:uppercase;margin-bottom:5px}
+.dev-detail strong{color:#26364A;font-size:14px}
+.dev-skills{background:#EAF4FF}
+.dev-heading{text-align:center;margin:0 auto 30px;max-width:720px}
+.dev-heading h2{font:600 clamp(29px,4vw,38px) Fredoka,sans-serif;color:#26364A;margin:9px 0}
+.dev-heading p{color:#586A80;line-height:1.8}
+.skill-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+.skill-card{background:#fff;border:1px solid #E1EBF8;border-radius:20px;padding:23px;text-align:center}
+.skill-icon{width:48px;height:48px;margin:0 auto 12px;display:grid;place-items:center;border-radius:15px;background:#EAF4FF;color:#2455B5;font-size:22px}
+.skill-card h3{font:600 19px Fredoka,sans-serif;color:#26364A;margin:0 0 7px}
+.skill-card p{font-size:14px;color:#68788B;line-height:1.7;margin:0}
+.dev-social{max-width:850px;margin:auto;background:#F3F7FF;border:1px solid #E1EBF8;border-radius:24px;padding:30px;text-align:center}
+.dev-social h2{font:600 28px Fredoka,sans-serif;color:#2455B5;margin:0 0 9px}
+.dev-social p{color:#586A80;line-height:1.8;margin:0 0 17px}
+.dev-social a{display:inline-block;text-decoration:none;background:#2455B5;color:#fff;padding:11px 20px;border-radius:30px;font-weight:900}
+@media(max-width:760px){.dev-profile{grid-template-columns:1fr;max-width:560px;gap:25px}.dev-photo-wrap{max-width:390px;margin:auto}.skill-grid{grid-template-columns:1fr}.dev-details{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.dev-hero{padding:60px 18px 42px}.dev-section{padding:48px 0}.dev-details{grid-template-columns:1fr}.dev-social{padding:23px}}
+
+.single-page{scroll-margin-top:100px}.single-page:not(#page-index){border-top:1px solid #edf3fc}.single-page .site-header,.single-page .footer{display:none}@media(max-width:1050px){.nav-links{gap:10px;font-size:11px}}
+
+/* Single-file multi-page navigation: tampilkan satu halaman pada satu waktu */
+main > .single-page{display:none}
+main > .single-page.is-active{display:block}
+html{scroll-behavior:auto}
+</style></head><body><header class="site-header" id="top"><nav class="navbar container" aria-label="Navigasi utama">
+<a class="brand" href="#page-index" aria-label="Lumière Preschool - Beranda"><img src="assets/logo-lumiere.png" alt="Logo Lumière Preschool"></a>
+<button class="menu-toggle" id="menuToggle" aria-label="Buka navigasi" aria-expanded="false" aria-controls="navLinks">☰</button>
+<div class="nav-links" id="navLinks">
+<a href="#page-index">Home</a>
+<div class="dropdown"><button class="drop-trigger" type="button" aria-expanded="false">About Us <span>⌄</span></button><div class="dropdown-menu"><a href="#page-about">Our Profile</a><a href="#page-about-vision">Vision &amp; Mission</a><a href="#page-about-team">Our Educators</a></div></div>
+<div class="dropdown"><button class="drop-trigger" type="button" aria-expanded="false">Programs <span>⌄</span></button><div class="dropdown-menu"><a href="#page-programs-playgroup">Playgroup</a><a href="#page-programs-kindergarten-a">Kindergarten A</a><a href="#page-programs-kindergarten-b">Kindergarten B</a></div></div>
+<div class="dropdown"><button class="drop-trigger" type="button" aria-expanded="false">Learning <span>⌄</span></button><div class="dropdown-menu"><a href="#page-learning-approach">Learning Approach</a><a href="#page-learning-activities">Learning Activities</a><a href="#page-learning-schedule">Daily Schedule</a></div></div>
+<div class="dropdown"><button class="drop-trigger" type="button" aria-expanded="false">School Life <span>⌄</span></button><div class="dropdown-menu"><a href="#page-school-life-facilities">Facilities</a><a href="#page-school-life-gallery">Gallery</a></div></div>
+<div class="dropdown"><button class="drop-trigger" type="button" aria-expanded="false">Parent Info <span>⌄</span></button><div class="dropdown-menu"><a href="#page-parent-info-calendar">School Calendar</a><a href="#page-parent-info-guide">Parent Guide</a><a href="#page-parent-info-fees">Tuition &amp; Fees</a><a href="#page-parent-info-faq">FAQ</a></div></div>
+<a href="#page-contact">Contact</a><a href="#page-developer">Website Developer</a></div>
+<div class="nav-actions"><button class="language-toggle" id="languageToggle" type="button" aria-label="Ganti bahasa">EN</button><a class="button button-small" href="#page-admissions">Apply Now</a></div>
+</nav></header><main><div class="single-page" id="page-index">
+<section class="hero" id="home">
+<div class="hero-wash"></div>
+<div class="hero-decor decor-star">✦</div>
+<div class="hero-decor decor-sun">✳</div>
+<div class="container hero-grid">
+<div class="hero-copy">
+<span class="eyebrow" data-en="A Joyful Place to Begin" data-id="A Joyful Place to Begin">
+        A Joyful Place to Begin
+      </span>
+<h1 data-en="LUMIÈRE PRESCHOOL" data-id="LUMIÈRE PRESCHOOL">
+        LUMIÈRE PRESCHOOL
+      </h1>
+<h2 class="hero-tagline" data-en="Growing at Their Own Pace." data-id="Growing at Their Own Pace.">
+        Growing at Their Own Pace.
+      </h2>
+<p class="hero-lead" data-en="We believe learning doesn't always begin with books, but with curiosity. Through play and exploration, children discover their surroundings and develop their potential." data-id="Kami percaya bahwa belajar tidak selalu dimulai dari buku, tetapi dari rasa ingin tahu. Melalui bermain dan bereksplorasi, anak mengenal lingkungan sekaligus mengembangkan potensinya.">
+        Kami percaya bahwa belajar tidak selalu dimulai dari buku, tetapi dari rasa ingin tahu. Melalui bermain dan bereksplorasi, anak mengenal lingkungan sekaligus mengembangkan potensinya.
+      </p>
+<div class="hero-buttons">
+<a class="button" data-en="Discover Our School" data-id="Kenali Sekolah Kami" href="#page-about">
+          Kenali Sekolah Kami
+        </a>
+<a class="text-link" data-en="Explore Our Programs →" data-id="Lihat Program Kami →" href="#page-programs">
+          Lihat Program Kami →
+        </a>
+</div>
+<div class="hero-note">
+<span>✿</span>
+<span data-en="Every child has a unique way to shine." data-id="Setiap anak memiliki cara unik untuk bersinar.">
+          Setiap anak memiliki cara unik untuk bersinar.
+        </span>
+</div>
+</div>
+<div class="hero-visual">
+<img alt="Anak-anak mengeksplorasi lingkungan belajar Lumière Preschool" src="assets/hero-classroom.png"/>
+</div>
+<div aria-hidden="true" class="hero-wave"></div>
+</div></section>
+<section class="welcome section-pad" id="welcome">
+<div class="container welcome-grid">
+<!-- FOTO DI SEBELAH KIRI -->
+<div class="welcome-art">
+<div class="welcome-photo-frame">
+<img alt="Anak-anak belajar di Lumière Preschool" class="welcome-photo" src="assets/welcome-photo.png"/>
+</div>
+</div>
+<div class="section-copy">
+<span class="eyebrow" data-en="Welcome to Lumière" data-id="Selamat Datang di Lumière">
+    Welcome to Lumière
+  </span>
+<h2 data-en="Where Every Child is Valued,&lt;br&gt;Every Journey Matters." data-id="Setiap Anak Berharga, Setiap Perjalanan Bermakna.">
+    Where Every Child is Valued,<br/>Every Journey Matters.
+  </h2>
+<p data-en="Lumière Preschool provides a welcoming space for children to explore the world, try new things, and develop their abilities at their own pace. We understand that every child has their own curiosity, interests, and unique way of learning." data-id="Lumière Preschool hadir sebagai ruang bagi anak untuk mengenal dunia, mencoba hal baru, dan mengembangkan kemampuan sesuai tahap perkembangannya. Kami memahami bahwa setiap anak memiliki rasa ingin tahu, ketertarikan, dan cara belajar yang berbeda.">
+    Lumière Preschool hadir sebagai ruang bagi anak untuk mengenal dunia, mencoba hal baru, dan mengembangkan kemampuan sesuai tahap perkembangannya. Kami memahami bahwa setiap anak memiliki rasa ingin tahu, ketertarikan, dan cara belajar yang berbeda.
+  </p>
+<p data-en="Through the Reggio Emilia approach, children are encouraged to learn through experiences, play, creativity, and interaction with their surroundings. We support every step of this journey so children can grow with confidence and develop their potential." data-id="Melalui pendekatan Reggio Emilia, anak diberi kesempatan untuk belajar melalui pengalaman, bermain, berkarya, dan berinteraksi dengan lingkungan sekitarnya. Kami mendampingi setiap proses tersebut agar anak dapat tumbuh dengan percaya diri serta mengembangkan potensinya.">
+    Melalui pendekatan Reggio Emilia, anak diberi kesempatan untuk belajar melalui pengalaman, bermain, berkarya, dan berinteraksi dengan lingkungan sekitarnya. Kami mendampingi setiap proses tersebut agar anak dapat tumbuh dengan percaya diri serta mengembangkan potensinya.
+  </p>
+<span class="welcome-tagline" data-en="A Little Place to Grow" data-id="Tempat Kecil untuk Bertumbuh">
+    A Little Place to Grow
+  </span>
+</div>
+</div></section>
+<section class="program-preview section-pad" id="program-preview">
+<div aria-hidden="true" class="program-decoration decoration-cloud">☁</div>
+<div aria-hidden="true" class="program-decoration decoration-rainbow">🌈</div>
+<div aria-hidden="true" class="program-decoration decoration-balloon">🎈</div>
+<div class="container">
+<!-- SECTION HEADING -->
+<div class="section-heading">
+<span class="eyebrow" data-en="A Journey for Every Age" data-id="Perjalanan untuk Setiap Usia">
+        Perjalanan untuk Setiap Usia
+      </span>
+<h2 data-en="Little Steps, Big Discoveries" data-id="Langkah Kecil, Penemuan Besar">
+        Little Steps, Big Discoveries
+      </h2>
+<p data-en="Every stage brings new discoveries, meaningful experiences, and opportunities to grow." data-id="Setiap tahap menghadirkan penemuan baru, pengalaman bermakna, dan kesempatan untuk bertumbuh.">
+        Setiap tahap menghadirkan penemuan baru, pengalaman bermakna, dan kesempatan untuk bertumbuh.
+      </p>
+</div>
+<!-- PROGRAM CARDS -->
+<div class="program-grid">
+<article class="program-card card-blue">
+<div class="program-card-top">
+<span class="card-icon">🧸</span>
+<span class="card-number">01</span>
+</div>
+<span class="age">2–4 YEARS</span>
+<h3>Playgroup</h3>
+<p data-en="A joyful first step into play, friendship, and discovery." data-id="Langkah awal yang menyenangkan melalui bermain, persahabatan, dan penemuan baru.">
+          Langkah awal yang menyenangkan melalui bermain, persahabatan, dan penemuan baru.
+        </p>
+<span class="card-decoration">✦</span>
+</article>
+<article class="program-card card-yellow">
+<div class="program-card-top">
+<span class="card-icon">🎨</span>
+<span class="card-number">02</span>
+</div>
+<span class="age">4–5 YEARS</span>
+<h3>Kindergarten A</h3>
+<p data-en="Growing through creativity, communication, and exploration." data-id="Bertumbuh melalui kreativitas, komunikasi, dan eksplorasi.">
+          Bertumbuh melalui kreativitas, komunikasi, dan eksplorasi.
+        </p>
+<span class="card-decoration">✿</span>
+</article>
+<article class="program-card card-pink">
+<div class="program-card-top">
+<span class="card-icon">⭐</span>
+<span class="card-number">03</span>
+</div>
+<span class="age">5–6 YEARS</span>
+<h3>Kindergarten B</h3>
+<p data-en="Building confidence, independence, and readiness for the next journey." data-id="Membangun kepercayaan diri, kemandirian, dan kesiapan untuk tahap berikutnya.">
+          Membangun kepercayaan diri, kemandirian, dan kesiapan untuk tahap berikutnya.
+        </p>
+<span class="card-decoration">✦</span>
+</article>
+</div>
+<!-- BUTTON -->
+<div class="center-action">
+<a class="button button-outline" data-en="Explore All Programs →" data-id="Jelajahi Semua Program →" href="#page-programs">
+        Jelajahi Semua Program →
+      </a>
+</div>
+</div>
+<div aria-hidden="true" class="program-bottom-decoration">
+</div>
+</section>
+ SECTION 4 - LEARNING APPROACH 
+<section class="approach-section section-pad" id="approach">
+<div class="container">
+<div class="approach-heading">
+<span class="eyebrow" data-en="HOW CHILDREN LEARN" data-id="HOW CHILDREN LEARN">
+        HOW CHILDREN LEARN
+      </span>
+<h2>
+        Inspired by the Reggio Emilia Approach.
+      </h2>
+<p data-en="We value children's ideas, encourage different ways of expression, and create an environment that invites meaningful exploration." data-id="Kami menghargai gagasan anak, mendorong beragam cara berekspresi, dan menyiapkan lingkungan yang mengundang eksplorasi bermakna.">
+        Kami menghargai gagasan anak, mendorong beragam cara berekspresi, dan menyiapkan lingkungan yang mengundang eksplorasi bermakna.
+      </p>
+<a class="approach-link" href="#page-learning#approach">
+        Explore Our Learning Approach →
+      </a>
+</div>
+</div>
+</section>
+<section class="school-life-preview section-pad" id="school-life-preview">
+<div class="container">
+<div class="section-heading">
+<span class="eyebrow" data-en="A Little Glimpse of Our World" data-id="A Little Glimpse of Our World">
+    A Little Glimpse of Our World
+  </span>
+<h2 data-en="A Place to &lt;em&gt;Learn and Grow.&lt;/em&gt;" data-id="A Place to &lt;em&gt;Learn and Grow.&lt;/em&gt;">
+    A Place to <em>Learn and Grow.</em>
+</h2>
+</div>
+<div class="life-grid">
+<a class="life-card life-facility" href="#page-school-life#facilities">
+<strong>Our Facilities</strong>
+<small>Ruang belajar yang mengundang eksplorasi</small>
+</a>
+<a class="life-card life-gallery" href="#page-school-life#gallery">
+<strong>Our Gallery</strong>
+<small>Momen kecil dalam perjalanan belajar</small>
+</a>
+<a class="life-card life-activities" href="#page-learning#activities">
+<strong>Daily Activities</strong>
+<small>Pengalaman belajar setiap hari</small>
+</a>
+</div>
+</div>
+</section>
+</div><div class="single-page" id="page-about-page-about">
+<section class="about-hero"><div class="container"><span class="kicker">GET TO KNOW LUMIÈRE</span><p data-en="Every child has a story and potential worth nurturing. Discover the journey, values, and learning environment we create at Lumière Preschool." data-id="Setiap anak memiliki cerita dan potensi yang layak untuk tumbuh. Kenali perjalanan, nilai, dan lingkungan belajar yang kami hadirkan di Lumière Preschool.">Setiap anak memiliki cerita dan potensi yang layak untuk tumbuh. Kenali perjalanan, nilai, dan lingkungan belajar yang kami hadirkan di Lumière Preschool.</p></div></section>
+<section class="about-intro" id="page-about-about-lumiere">
+<div class="container about-intro-container">
+<div class="about-intro-text">
+<span class="kicker" data-en="GET TO KNOW OUR SCHOOL" data-id="GET TO KNOW OUR SCHOOL">
+                GET TO KNOW OUR SCHOOL
+            </span>
+<h2>
+<span data-en="About" data-id="About">About</span>
+<em>Lumière.</em>
+</h2>
+<p data-en="Lumière Preschool is an early childhood education institution that provides a warm, creative, and joyful learning environment. We are committed to guiding every child in discovering their potential, developing creativity, and building self-confidence from an early age." data-id="Lumière Preschool merupakan lembaga pendidikan anak usia dini yang menghadirkan lingkungan belajar hangat, kreatif, dan menyenangkan. Kami berkomitmen mendampingi setiap anak dalam mengenali potensi, mengembangkan kreativitas, serta membangun rasa percaya diri sejak usia dini.">
+                Lumière Preschool merupakan lembaga pendidikan anak usia dini yang menghadirkan lingkungan belajar hangat, kreatif, dan menyenangkan. Kami berkomitmen mendampingi setiap anak dalam mengenali potensi, mengembangkan kreativitas, serta membangun rasa percaya diri sejak usia dini.
+            </p>
+</div>
+<div class="about-stats">
+<div class="stat-card stat-blue">
+<span class="stat-number">2018</span>
+<span class="stat-label" data-en="Established Since" data-id="Sejak Berdiri">
+            Established Since
+        </span>
+</div>
+<div class="stat-card stat-light">
+<span class="stat-number">Reggio Emilia</span>
+<span class="stat-label" data-en="Learning Approach" data-id="Pendekatan Pembelajaran">
+            Learning Approach
+        </span>
+</div>
+<div class="stat-card stat-light">
+<span class="stat-number">92</span>
+<span class="stat-label" data-en="Active Students" data-id="Siswa Aktif">
+            Active Students
+        </span>
+</div>
+<div class="stat-card stat-blue">
+<span class="stat-number">520</span>
+<span class="stat-label" data-en="Our Alumni" data-id="Jumlah Alumni">
+            Our Alumni
+        </span>
+</div>
+</div>
+</div></section>
+ OUR VISION &amp; MISSION 
+<section class="vision-mission" id="page-about-vision-mission">
+<div class="vision-overlay"></div>
+<div class="vision-container">
+<div class="vision-heading">
+<h2>Our Vision &amp; <em>Mission.</em></h2>
+<p data-en="The foundation that guides us in supporting every child's growth and learning journey." data-id="Arah yang menjadi dasar dalam mendampingi proses tumbuh dan belajar setiap anak.">
+                Arah yang menjadi dasar dalam mendampingi proses tumbuh dan belajar setiap anak.
+            </p>
+</div>
+<div class="vision-content">
+<!-- OUR VISION -->
+<div class="vision-card">
+<h3>Our Vision</h3>
+<p data-en="To become an early childhood learning environment that supports holistic development, values every child's uniqueness, and nurtures curiosity, creativity, and independence." data-id="Menjadi lingkungan pendidikan anak usia dini yang mendukung tumbuh kembang anak secara utuh, menghargai keunikan setiap individu, serta menumbuhkan rasa ingin tahu, kreativitas, dan kemandirian.">
+                    Menjadi lingkungan pendidikan anak usia dini yang mendukung tumbuh kembang anak secara utuh, menghargai keunikan setiap individu, serta menumbuhkan rasa ingin tahu, kreativitas, dan kemandirian.
+                </p>
+</div>
+<!-- OUR MISSION -->
+<div class="mission-card">
+<h3>Our Mission</h3>
+<ul>
+<li data-en="Creating a safe, warm learning environment that encourages exploration." data-id="Menciptakan lingkungan belajar yang aman, hangat, dan mendorong eksplorasi.">
+                        Menciptakan lingkungan belajar yang aman, hangat, dan mendorong eksplorasi.
+                    </li>
+<li data-en="Providing child-centered learning activities suited to each developmental stage." data-id="Menghadirkan kegiatan belajar yang berpusat pada anak dan sesuai tahap perkembangannya.">
+                        Menghadirkan kegiatan belajar yang berpusat pada anak dan sesuai tahap perkembangannya.
+                    </li>
+<li data-en="Encouraging children's creativity, communication, collaboration, and independence." data-id="Mendorong kreativitas, komunikasi, kolaborasi, dan kemandirian anak.">
+                        Mendorong kreativitas, komunikasi, kolaborasi, dan kemandirian anak.
+                    </li>
+<li data-en="Building positive partnerships between the school and families." data-id="Membangun kerja sama yang positif antara sekolah dan keluarga.">
+                        Membangun kerja sama yang positif antara sekolah dan keluarga.
+                    </li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+ OUR EDUCATIONAL PHILOSOPHY 
+<section class="philosophy-section" id="page-about-philosophy">
+<div class="philosophy-container">
+<div class="philosophy-content">
+<h2>Learning Through <em>Wonder.</em></h2>
+<p>
+                Filosofi pendidikan Lumière Preschool terinspirasi oleh pendekatan
+                Reggio Emilia. Kami memandang anak sebagai individu yang aktif,
+                memiliki rasa ingin tahu, dan mampu membangun pemahaman melalui
+                pengalaman serta interaksi dengan lingkungan.
+            </p>
+<p>
+                Guru berperan sebagai pendamping yang mengamati minat anak,
+                mengajukan pertanyaan pemantik, dan menyiapkan lingkungan yang
+                mendorong eksplorasi. Anak diberi ruang untuk mengekspresikan
+                gagasan melalui seni, gerak, bahasa, dan kegiatan proyek.
+            </p>
+<div class="philosophy-principles">
+<div class="principle-item">
+<h3>Child-Centered Learning</h3>
+<p>Pembelajaran yang berpusat pada anak.</p>
+</div>
+<div class="principle-item">
+<h3>Learning Through Exploration</h3>
+<p>Belajar melalui pengalaman dan eksplorasi.</p>
+</div>
+<div class="principle-item">
+<h3>The Environment as Teacher</h3>
+<p>Lingkungan sebagai bagian dari proses belajar.</p>
+</div>
+<div class="principle-item">
+<h3>Many Ways to Express Ideas</h3>
+<p>Beragam cara anak mengekspresikan gagasan.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+ OUR TEAM 
+<section class="about-block team-section" id="page-about-team">
+<div class="container">
+<div class="section-intro">
+<h2>The People Behind <em>Every Discovery.</em></h2>
+<p>
+                Kenali tim Lumière Preschool yang bekerja sama
+                dalam menciptakan lingkungan belajar yang hangat,
+                kreatif, dan menyenangkan bagi setiap anak.
+            </p>
+</div>
+<div class="team-chart">
+<img alt="Lumière Preschool Organizational Team Structure" src="assets/lumiere-team-structure.png"/>
+</div>
+</div>
+</section>
+ SCHOOL HIGHLIGHTS 
+<section class="about-block" id="page-about-highlights">
+<div class="container">
+<div class="section-intro">
+<h2>Little Things That Make <em>Us Special.</em></h2>
+<p data-en="A few things that shape the learning experience at Lumière Preschool." data-id="Beberapa hal yang menjadi perhatian dan ciri khas pengalaman belajar di Lumière Preschool.">
+                Beberapa hal yang menjadi perhatian dan ciri khas pengalaman belajar di Lumière Preschool.
+            </p>
+</div>
+<div class="highlights-grid">
+<article class="highlight">
+<span>🧩</span>
+<h3>Reggio Emilia Inspired</h3>
+<p data-en="Learning that makes room for children's curiosity, exploration, and ideas." data-id="Pembelajaran yang memberi ruang bagi rasa ingin tahu, eksplorasi, dan gagasan anak.">
+                    Pembelajaran yang memberi ruang bagi rasa ingin tahu, eksplorasi, dan gagasan anak.
+                </p>
+</article>
+<article class="highlight">
+<span>🎨</span>
+<h3>Creative Atelier</h3>
+<p data-en="Creative spaces and activities to explore different materials, media, and forms of expression." data-id="Ruang dan kegiatan berkarya untuk mencoba berbagai bahan, media, dan cara berekspresi.">
+                    Ruang dan kegiatan berkarya untuk mencoba berbagai bahan, media, dan cara berekspresi.
+                </p>
+</article>
+<article class="highlight">
+<span>🌱</span>
+<h3>Child-Centered</h3>
+<p data-en="Learning experiences consider each child's interests, needs, and developmental stage." data-id="Kegiatan belajar memperhatikan minat, kebutuhan, dan tahap perkembangan setiap anak.">
+                    Kegiatan belajar memperhatikan minat, kebutuhan, dan tahap perkembangan setiap anak.
+                </p>
+</article>
+<article class="highlight">
+<span>🤝</span>
+<h3>Family Partnership</h3>
+<p data-en="Building positive communication and partnership between school and families." data-id="Membangun komunikasi dan kerja sama yang positif antara sekolah dan keluarga.">
+                    Membangun komunikasi dan kerja sama yang positif antara sekolah dan keluarga.
+                </p>
+</article>
+<article class="highlight">
+<span>🔎</span>
+<h3>Learning by Exploring</h3>
+<p data-en="Children learn through observation, experimentation, conversation, and hands-on experiences." data-id="Anak belajar melalui pengamatan, percobaan, percakapan, dan pengalaman langsung.">
+                    Anak belajar melalui pengamatan, percobaan, percakapan, dan pengalaman langsung.
+                </p>
+</article>
+<article class="highlight">
+<span>💙</span>
+<h3>Warm Environment</h3>
+<p data-en="A learning environment designed to help children feel welcomed, safe, and confident." data-id="Lingkungan belajar yang dirancang agar anak merasa diterima, aman, dan percaya diri.">
+                    Lingkungan belajar yang dirancang agar anak merasa diterima, aman, dan percaya diri.
+                </p>
+</article>
+</div>
+</div>
+</section>
+</div><div class="single-page" id="page-programs-page-programs">
+ PROGRAM INTRO 
+<section class="programs-intro">
+<div class="container">
+<span class="kicker">GROWING THROUGH EVERY STAGE</span>
+<h2>A Place to <em>Grow and Discover.</em></h2>
+<p data-en="Lumière Preschool programs are designed to support children's learning journeys step by step. Inspired by the Reggio Emilia approach, each group is given opportunities to develop curiosity, creativity, communication, and independence through meaningful experiences." data-id="Program di Lumière Preschool dirancang untuk mendampingi perjalanan belajar anak secara bertahap. Melalui pendekatan yang terinspirasi Reggio Emilia, setiap kelompok mendapat kesempatan untuk mengembangkan rasa ingin tahu, kreativitas, kemampuan berkomunikasi, dan kemandirian melalui pengalaman yang bermakna.">
+            Program di Lumière Preschool dirancang untuk mendampingi perjalanan belajar anak secara bertahap. Melalui pendekatan yang terinspirasi Reggio Emilia, setiap kelompok mendapat kesempatan untuk mengembangkan rasa ingin tahu, kreativitas, kemampuan berkomunikasi, dan kemandirian melalui pengalaman yang bermakna.
+        </p>
+</div>
+</section>
+ PLAYGROUP 
+<section class="program-section" id="page-programs-playgroup">
+<div class="container program-layout">
+<div class="program-art">
+<img alt="Children enjoying Playgroup activities" src="assets/playgroup.jpg"/>
+<div class="art-caption">A Gentle First Step</div>
+</div>
+<div class="program-copy">
+<span class="kicker">01 / FIRST EXPERIENCES</span>
+<h2>Playgroup <em>Program.</em></h2>
+<p data-en="Playgroup offers children an early opportunity to become familiar with a learning environment beyond home. Through play, simple interactions, and joyful exploration, children begin to build a sense of security, confidence, and curiosity to try new things." data-id="Playgroup menjadi ruang awal bagi anak untuk mengenal lingkungan belajar di luar rumah. Melalui permainan, interaksi sederhana, dan eksplorasi yang menyenangkan, anak mulai membangun rasa aman, percaya diri, serta ketertarikan untuk mencoba hal-hal baru.">
+                Playgroup menjadi ruang awal bagi anak untuk mengenal lingkungan belajar di luar rumah. Melalui permainan, interaksi sederhana, dan eksplorasi yang menyenangkan, anak mulai membangun rasa aman, percaya diri, serta ketertarikan untuk mencoba hal-hal baru.
+            </p>
+<p data-en="Teachers guide children through warm routines and experiences that invite them to move, observe, touch, communicate, and become familiar with the world around them." data-id="Guru mendampingi anak melalui rutinitas yang hangat dan kegiatan yang memberi ruang untuk bergerak, mengamati, menyentuh, berkomunikasi, serta mengenali lingkungan sekitarnya.">
+                Guru mendampingi anak melalui rutinitas yang hangat dan kegiatan yang memberi ruang untuk bergerak, mengamati, menyentuh, berkomunikasi, serta mengenali lingkungan sekitarnya.
+            </p>
+<div class="program-points">
+<div class="program-point">
+<strong>Social Connection</strong>
+                    Mengenal teman dan belajar berinteraksi.
+                </div>
+<div class="program-point">
+<strong>Playful Exploration</strong>
+                    Mengeksplorasi benda, tekstur, dan lingkungan.
+                </div>
+<div class="program-point">
+<strong>Early Independence</strong>
+                    Mulai mencoba melakukan hal sederhana secara mandiri.
+                </div>
+<div class="program-point">
+<strong>Creative Expression</strong>
+                    Mengekspresikan diri melalui gerak, suara, dan karya.
+                </div>
+</div>
+</div>
+</div>
+</section>
+ KINDERGARTEN A 
+<section class="program-section" id="page-programs-kindergarten-a">
+<div class="container program-layout reverse">
+<div class="program-copy">
+<span class="kicker">02 / BUILDING CONFIDENCE</span>
+<h2>Kindergarten A <em>Program.</em></h2>
+<p data-en="Kindergarten A encourages children to share ideas more actively, deepen their curiosity, and build relationships with peers. Learning experiences include hands-on exploration, conversations, collaborative play, and simple projects inspired by children's surroundings." data-id="Kindergarten A mendukung anak untuk semakin aktif menyampaikan ide, mengembangkan rasa ingin tahu, dan membangun hubungan dengan teman. Kegiatan belajar disusun melalui pengalaman langsung, percakapan, permainan kolaboratif, serta proyek sederhana yang berangkat dari hal-hal menarik di sekitar anak.">
+                Kindergarten A mendukung anak untuk semakin aktif menyampaikan ide, mengembangkan rasa ingin tahu, dan membangun hubungan dengan teman. Kegiatan belajar disusun melalui pengalaman langsung, percakapan, permainan kolaboratif, serta proyek sederhana yang berangkat dari hal-hal menarik di sekitar anak.
+            </p>
+<p data-en="Children are encouraged to ask questions, observe, test possibilities, and share their experiences in different ways." data-id="Anak diberi kesempatan untuk bertanya, mengamati, mencoba berbagai kemungkinan, dan menceritakan kembali pengalaman mereka dengan cara yang beragam.">
+                Anak diberi kesempatan untuk bertanya, mengamati, mencoba berbagai kemungkinan, dan menceritakan kembali pengalaman mereka dengan cara yang beragam.
+            </p>
+<div class="program-points">
+<div class="program-point">
+<strong>Curiosity &amp; Questions</strong>
+                    Mengembangkan keberanian untuk bertanya dan mencari tahu.
+                </div>
+<div class="program-point">
+<strong>Creative Thinking</strong>
+                    Mencoba ide dan solusi melalui kegiatan kreatif.
+                </div>
+<div class="program-point">
+<strong>Friendship &amp; Collaboration</strong>
+                    Belajar bekerja sama dan menghargai teman.
+                </div>
+<div class="program-point">
+<strong>Communication</strong>
+                    Mengungkapkan gagasan melalui bahasa dan karya.
+                </div>
+</div>
+</div>
+<div class="program-art gold">
+<img alt="Children exploring and learning together" src="assets/kindergarten-a.jpg"/>
+<div class="art-caption">Curious Minds, Growing Ideas</div>
+</div>
+</div>
+</section>
+ KINDERGARTEN B 
+<section class="program-section" id="page-programs-kindergarten-b">
+<div class="container program-layout">
+<div class="program-art lavender">
+<img alt="Children learning and exploring together" src="assets/kindergarten-b.jpg"/>
+<div class="art-caption">Ready for New Possibilities</div>
+</div>
+<div class="program-copy">
+<span class="kicker">03 / PREPARING FOR WHAT'S NEXT</span>
+<h2>Kindergarten B <em>Program.</em></h2>
+<p data-en="Kindergarten B gives children room to broaden their understanding, take initiative, and apply skills developed through earlier learning experiences. Children engage in deeper projects, problem-solving experiences, and group work." data-id="Kindergarten B memberikan ruang bagi anak untuk memperluas pemahaman, mengembangkan inisiatif, dan menerapkan keterampilan yang telah dibangun melalui pengalaman belajar sebelumnya. Anak terlibat dalam proyek yang lebih mendalam, kegiatan pemecahan masalah, dan kerja kelompok.">
+                Kindergarten B memberikan ruang bagi anak untuk memperluas pemahaman, mengembangkan inisiatif, dan menerapkan keterampilan yang telah dibangun melalui pengalaman belajar sebelumnya. Anak terlibat dalam proyek yang lebih mendalam, kegiatan pemecahan masalah, dan kerja kelompok.
+            </p>
+<p data-en="Teacher guidance helps children build confidence, manage simple responsibilities, and prepare for the next stage of their educational journey." data-id="Pendampingan guru membantu anak membangun kepercayaan diri, mengelola tanggung jawab sederhana, serta mempersiapkan diri untuk melanjutkan perjalanan ke jenjang pendidikan berikutnya.">
+                Pendampingan guru membantu anak membangun kepercayaan diri, mengelola tanggung jawab sederhana, serta mempersiapkan diri untuk melanjutkan perjalanan ke jenjang pendidikan berikutnya.
+            </p>
+<div class="program-points">
+<div class="program-point">
+<strong>Project Exploration</strong>
+                    Mengembangkan gagasan melalui proyek bersama.
+                </div>
+<div class="program-point">
+<strong>Problem Solving</strong>
+                    Belajar mencoba, mengevaluasi, dan menemukan solusi.
+                </div>
+<div class="program-point">
+<strong>Growing Independence</strong>
+                    Melatih tanggung jawab dan kemandirian.
+                </div>
+<div class="program-point">
+<strong>School Readiness</strong>
+                    Membangun kesiapan untuk tahap belajar berikutnya.
+                </div>
+</div>
+</div>
+</div>
+</section>
+ CLOSING NOTE 
+<section class="program-note">
+<div class="container">
+<div class="program-note-card">
+<h2>Every Child Has Their Own Way to Shine.</h2>
+<p data-en="In every program, we recognize that each child grows at their own pace and in their own way. Teachers observe children's needs and interests so learning experiences remain relevant, joyful, and meaningful." data-id="Di setiap program, kami menghargai bahwa setiap anak berkembang dengan kecepatan dan cara yang berbeda. Guru mengamati kebutuhan serta minat anak agar pengalaman belajar dapat terasa relevan, menyenangkan, dan bermakna.">
+                Di setiap program, kami menghargai bahwa setiap anak berkembang dengan kecepatan dan cara yang berbeda. Guru mengamati kebutuhan serta minat anak agar pengalaman belajar dapat terasa relevan, menyenangkan, dan bermakna.
+            </p>
+</div>
+</div>
+</section>
+</div><div class="single-page" id="page-learning-page-learning">
+<section class="learning-hero">
+<div class="container"><span class="kicker">LEARNING WITH PURPOSE</span><h1>Curiosity Leads to <em>Discovery.</em></h1><p data-en="At Lumière Preschool, children learn through experiences connected to their everyday lives. Every question, experiment, and idea becomes part of growing and discovering something new." data-id="Di Lumière Preschool, anak belajar melalui pengalaman yang dekat dengan kehidupan mereka. Setiap pertanyaan, percobaan, dan ide menjadi bagian dari proses tumbuh dan menemukan hal baru.">Di Lumière Preschool, anak belajar melalui pengalaman yang dekat dengan kehidupan mereka. Setiap pertanyaan, percobaan, dan ide menjadi bagian dari proses tumbuh dan menemukan hal baru.</p></div>
+</section>
+<section class="learning-section" id="page-learning-approach">
+<div class="container">
+<div class="learning-heading"><span class="kicker">01 / OUR APPROACH</span><h2>Learning Begins with <em>Wonder.</em></h2><p data-en="We are inspired by the Reggio Emilia approach, which sees children as capable, curious individuals with many ways to express their ideas. Teachers act as guides who observe, listen, and help children develop their curiosity." data-id="Kami terinspirasi oleh pendekatan Reggio Emilia yang memandang anak sebagai individu aktif, penuh potensi, dan memiliki banyak cara untuk mengekspresikan gagasan. Guru hadir sebagai pendamping yang mengamati, mendengarkan, dan membantu anak mengembangkan rasa ingin tahunya.">Kami terinspirasi oleh pendekatan Reggio Emilia yang memandang anak sebagai individu aktif, penuh potensi, dan memiliki banyak cara untuk mengekspresikan gagasan. Guru hadir sebagai pendamping yang mengamati, mendengarkan, dan membantu anak mengembangkan rasa ingin tahunya.</p></div>
+<div class="learning-approach-grid">
+<div class="approach-feature"><h3>The Reggio Emilia Inspiration</h3><p data-en="Learning grows from children's interests and questions. Through projects, conversations, observation, and exploration, children build understanding through real experiences rather than simply receiving information." data-id="Pembelajaran berangkat dari minat dan pertanyaan anak. Melalui proyek, percakapan, pengamatan, dan eksplorasi, anak diajak membangun pemahaman berdasarkan pengalaman nyata, bukan hanya menerima informasi.">Pembelajaran berangkat dari minat dan pertanyaan anak. Melalui proyek, percakapan, pengamatan, dan eksplorasi, anak diajak membangun pemahaman berdasarkan pengalaman nyata, bukan hanya menerima informasi.</p><p data-en="The environment is prepared as a space that invites children to experiment, collaborate, create, and discover new possibilities." data-id="Lingkungan disiapkan sebagai ruang yang mengundang anak untuk mencoba, bekerja sama, berkarya, dan menemukan kemungkinan baru.">Lingkungan disiapkan sebagai ruang yang mengundang anak untuk mencoba, bekerja sama, berkarya, dan menemukan kemungkinan baru.</p></div>
+<div class="approach-side">
+<div class="approach-point"><strong>Child-Led Exploration</strong><span>Minat dan pertanyaan anak menjadi awal kegiatan belajar.</span></div>
+<div class="approach-point"><strong>Learning Together</strong><span>Anak belajar berbagi ide dan membangun pemahaman bersama.</span></div>
+<div class="approach-point"><strong>Many Ways to Express</strong><span>Anak menyampaikan gagasan melalui bahasa, seni, gerak, dan karya.</span></div>
+<div class="approach-point"><strong>Meaningful Environment</strong><span>Ruang dan material membantu memantik rasa ingin tahu.</span></div>
+</div>
+</div>
+</div>
+</section>
+<section class="learning-section soft" id="page-learning-activities">
+<div class="container">
+<div class="learning-heading"><span class="kicker">02 / EVERYDAY DISCOVERIES</span><h2>Learning Through <em>Experience.</em></h2><p data-en="Learning experiences are designed to invite children to participate actively. Children have opportunities to observe, experiment, discuss, move, and express ideas through different activities." data-id="Kegiatan belajar dirancang agar anak dapat terlibat secara langsung. Anak mendapat kesempatan untuk mengamati, mencoba, berdiskusi, bergerak, dan menuangkan ide melalui berbagai bentuk kegiatan.">Kegiatan belajar dirancang agar anak dapat terlibat secara langsung. Anak mendapat kesempatan untuk mengamati, mencoba, berdiskusi, bergerak, dan menuangkan ide melalui berbagai bentuk kegiatan.</p></div>
+<div class="learning-cards">
+<div class="learning-card"><span class="card-number">01</span><h3>Creative Atelier</h3><p>Bereksperimen dengan warna, bentuk, tekstur, dan beragam material untuk mengekspresikan gagasan melalui karya.</p></div>
+<div class="learning-card"><span class="card-number">02</span><h3>Nature Exploration</h3><p>Mengamati tanaman, serangga, air, cahaya, dan perubahan di lingkungan sekitar melalui pengalaman langsung.</p></div>
+<div class="learning-card"><span class="card-number">03</span><h3>Story &amp; Language</h3><p>Mengembangkan kemampuan berbahasa melalui cerita, percakapan, membaca bersama, dan bermain peran.</p></div>
+<div class="learning-card"><span class="card-number">04</span><h3>Early Numeracy</h3><p>Mengenal pola, bentuk, ukuran, jumlah, dan konsep sederhana melalui permainan serta benda konkret.</p></div>
+<div class="learning-card"><span class="card-number">05</span><h3>Movement &amp; Music</h3><p>Mengeksplorasi gerak, irama, lagu, dan permainan yang mendukung koordinasi serta ekspresi diri.</p></div>
+<div class="learning-card"><span class="card-number">06</span><h3>Collaborative Projects</h3><p>Mengembangkan ide bersama teman melalui proyek sederhana, diskusi, percobaan, dan pemecahan masalah.</p></div>
+</div>
+</div>
+</section>
+<section class="learning-section" id="page-learning-schedule">
+<div class="container">
+<div class="learning-heading"><span class="kicker">03 / A DAY AT LUMIÈRE</span><h2>A Day Full of <em>Possibilities.</em></h2><p data-en="Daily routines offer a balance of guided activities, open exploration, rest, and time with friends. The schedule below is an example and may be adjusted to each age group's needs." data-id="Rutinitas harian memberikan keseimbangan antara kegiatan terarah, eksplorasi bebas, waktu istirahat, dan interaksi bersama teman. Jadwal berikut merupakan gambaran kegiatan harian yang dapat menyesuaikan kebutuhan setiap kelompok usia.">Rutinitas harian memberikan keseimbangan antara kegiatan terarah, eksplorasi bebas, waktu istirahat, dan interaksi bersama teman. Jadwal berikut merupakan gambaran kegiatan harian yang dapat menyesuaikan kebutuhan setiap kelompok usia.</p></div>
+<div class="schedule-wrap">
+<div class="schedule-item"><div class="schedule-time">07.30 – 08.00</div><div class="schedule-detail"><strong>Warm Welcome</strong><span>Kedatangan, sapaan pagi, dan bermain sambil menunggu teman.</span></div></div>
+<div class="schedule-item"><div class="schedule-time">08.00 – 08.30</div><div class="schedule-detail"><strong>Morning Circle</strong><span>Berbagi cerita, bernyanyi, dan mengenal rencana kegiatan hari ini.</span></div></div>
+<div class="schedule-item"><div class="schedule-time">08.30 – 09.30</div><div class="schedule-detail"><strong>Discovery &amp; Exploration</strong><span>Eksplorasi material, kegiatan proyek, dan pengalaman belajar utama.</span></div></div>
+<div class="schedule-item"><div class="schedule-time">09.30 – 10.00</div><div class="schedule-detail"><strong>Snack &amp; Social Time</strong><span>Makan ringan, membangun kebiasaan mandiri, dan berinteraksi.</span></div></div>
+<div class="schedule-item"><div class="schedule-time">10.00 – 10.45</div><div class="schedule-detail"><strong>Outdoor Play</strong><span>Bergerak, bermain, dan mengenali lingkungan sekitar.</span></div></div>
+<div class="schedule-item"><div class="schedule-time">10.45 – 11.30</div><div class="schedule-detail"><strong>Creative Expression</strong><span>Seni, musik, cerita, atau kegiatan kelompok sesuai tema.</span></div></div>
+<div class="schedule-item"><div class="schedule-time">11.30 – 12.00</div><div class="schedule-detail"><strong>Reflection &amp; Goodbye</strong><span>Mengingat pengalaman hari ini, merapikan perlengkapan, dan bersiap pulang.</span></div></div>
+</div>
+</div>
+</section>
+<section class="learning-section tint" id="page-learning-extracurricular">
+<div class="container">
+<div class="learning-heading"><span class="kicker">04 / BEYOND THE CLASSROOM</span><h2>Discover More, <em>Grow More.</em></h2><p data-en="Enrichment activities give children opportunities to try new experiences, discover interests, and develop abilities through joyful activities." data-id="Kegiatan tambahan memberi ruang bagi anak untuk mencoba pengalaman baru, mengenali minat, dan mengembangkan kemampuan melalui aktivitas yang menyenangkan.">Kegiatan tambahan memberi ruang bagi anak untuk mencoba pengalaman baru, mengenali minat, dan mengembangkan kemampuan melalui aktivitas yang menyenangkan.</p></div>
+<div class="extra-grid">
+<div class="extra-card"><span class="extra-label">ART &amp; CREATIVITY</span><h3>Little Artists</h3><p>Aktivitas seni dan kerajinan untuk mengeksplorasi ide, warna, bentuk, serta berbagai material.</p></div>
+<div class="extra-card"><span class="extra-label">MOVEMENT</span><h3>Little Movers</h3><p>Permainan gerak dan aktivitas fisik yang mendukung koordinasi, keseimbangan, dan rasa percaya diri.</p></div>
+<div class="extra-card"><span class="extra-label">MUSIC &amp; RHYTHM</span><h3>Little Musicians</h3><p>Mengenal lagu, bunyi, ritme, dan alat musik sederhana sebagai sarana berekspresi.</p></div>
+</div>
+</div>
+</section>
+<section class="learning-note"><div class="container"><div class="learning-note-box"><h2>Every Discovery Matters.</h2><p data-en="We believe meaningful learning grows from opportunities to ask, experiment, and discover. Every child has a unique way of learning, and every small step deserves to be valued." data-id="Kami percaya proses belajar yang bermakna tumbuh dari kesempatan untuk bertanya, mencoba, dan menemukan. Setiap anak memiliki cara unik untuk belajar, dan setiap proses kecil layak dihargai.">Kami percaya proses belajar yang bermakna tumbuh dari kesempatan untuk bertanya, mencoba, dan menemukan. Setiap anak memiliki cara unik untuk belajar, dan setiap proses kecil layak dihargai.</p></div></div></section>
+</div><div class="single-page" id="page-school-life-page-school-life">
+<section class="school-hero">
+<div class="container">
+<span class="kicker">LIFE AT LUMIÈRE</span>
+<h1>A Place to Belong, <em>Explore &amp; Grow.</em></h1>
+<p data-en="Every corner of Lumière Preschool is designed to offer warm, safe, and meaningful learning experiences. Children have room to play, explore, build friendships, and discover something new every day." data-id="Setiap sudut Lumière Preschool dirancang untuk menghadirkan pengalaman belajar yang hangat, aman, dan bermakna. Anak memiliki ruang untuk bermain, bereksplorasi, membangun pertemanan, dan menemukan hal-hal baru setiap hari.">Setiap sudut Lumière Preschool dirancang untuk menghadirkan pengalaman belajar yang hangat, aman, dan bermakna. Anak memiliki ruang untuk bermain, bereksplorasi, membangun pertemanan, dan menemukan hal-hal baru setiap hari.</p>
+</div>
+</section>
+<section class="school-intro" id="page-school-life-facilities">
+<div class="container">
+<span class="kicker">OUR LEARNING ENVIRONMENT</span>
+<h2>Spaces Made for <em>Little Explorers.</em></h2>
+<p data-en="The school environment is part of each child's learning journey. Our spaces encourage curiosity, creativity, interaction, and a sense of comfort throughout the day." data-id="Lingkungan sekolah menjadi bagian dari proses belajar anak. Kami menghadirkan ruang yang mendorong rasa ingin tahu, kreativitas, interaksi, serta rasa nyaman selama anak menjalani kegiatan sehari-hari.">Lingkungan sekolah menjadi bagian dari proses belajar anak. Kami menghadirkan ruang yang mendorong rasa ingin tahu, kreativitas, interaksi, serta rasa nyaman selama anak menjalani kegiatan sehari-hari.</p>
+</div>
+</section>
+<section class="facilities-section">
+<div class="container facilities-grid">
+<article class="facility-card"><div class="facility-image"><img alt="Atelier Lumière Preschool" src="assets/facility-atelier.jpg"/></div><div class="facility-copy"><h3>Art Atelier</h3><p>Ruang bagi anak untuk bereksperimen dengan warna, bentuk, tekstur, dan beragam media seni sebagai cara mengekspresikan gagasan.</p></div></article>
+<article class="facility-card"><div class="facility-image"><img alt="Perpustakaan anak Lumière Preschool" src="assets/facility-library.jpg"/></div><div class="facility-copy"><h3>Little Library</h3><p>Area membaca yang nyaman untuk mengenal buku, menikmati cerita, memperkaya kosakata, dan menumbuhkan kecintaan pada kegiatan membaca.</p></div></article>
+<article class="facility-card"><div class="facility-image"><img alt="Piazza atau ruang berkumpul Lumière Preschool" src="assets/facility-piazza.jpg"/></div><div class="facility-copy"><h3>Piazza</h3><p>Ruang bersama untuk berkumpul, berdiskusi, berbagi hasil karya, dan mengikuti kegiatan komunitas sekolah.</p></div></article>
+<article class="facility-card"><div class="facility-image"><img alt="Studio konstruksi anak" src="assets/facility-construction-studio.jpg"/></div><div class="facility-copy"><h3>Construction Studio</h3><p>Tempat anak membangun dan menguji ide menggunakan balok, bahan rakitan, serta material konstruksi yang aman.</p></div></article>
+<article class="facility-card"><div class="facility-image"><img alt="Ruang eksplorasi alam" src="assets/facility-nature-exploration.jpg"/></div><div class="facility-copy"><h3>Nature Exploration Room</h3><p>Ruang untuk mengamati dan mengeksplorasi benda-benda alam seperti daun, biji, batu, pasir, dan material alami lainnya.</p></div></article>
+<article class="facility-card"><div class="facility-image"><img alt="Garden Lumière Preschool" src="assets/facility-garden.jpg"/></div><div class="facility-copy"><h3>Learning Garden</h3><p>Area luar ruang untuk merawat tanaman, mengamati pertumbuhan, mengenal lingkungan, dan belajar bertanggung jawab terhadap alam.</p></div></article>
+<article class="facility-card"><div class="facility-image"><img alt="Ruang kelas Lumière Preschool" src="assets/facility-classroom.jpg"/></div><div class="facility-copy"><h3>Classroom</h3><p>Ruang belajar yang tertata nyaman dan fleksibel untuk kegiatan individu, kelompok, bermain, serta proyek bersama.</p></div></article>
+<article class="facility-card"><div class="facility-image"><img alt="Ruang makan anak" src="assets/facility-dining-room.jpg"/></div><div class="facility-copy"><h3>Dining Room</h3><p>Ruang makan yang bersih dan nyaman untuk membangun kebiasaan makan bersama, kemandirian, dan etika saat makan.</p></div></article>
+<article class="facility-card"><div class="facility-image"><img alt="Toilet anak" src="assets/facility-kids-restroom.jpg"/></div><div class="facility-copy"><h3>Children's Restroom</h3><p>Toilet yang dirancang agar mudah digunakan anak dengan pendampingan, serta mendukung kebiasaan hidup bersih dan mandiri.</p></div></article>
+<article class="facility-card"><div class="facility-image"><img alt="Ruang guru" src="assets/facility-teachers-room.jpg"/></div><div class="facility-copy"><h3>Teachers' Room</h3><p>Ruang kerja dan koordinasi guru untuk merencanakan kegiatan, berdiskusi, serta mendokumentasikan proses belajar anak.</p></div></article>
+<article class="facility-card"><div class="facility-image"><img alt="Ruang tunggu orang tua" src="assets/facility-parent-waiting-room.jpg"/></div><div class="facility-copy"><h3>Parent Waiting Lounge</h3><p>Area tunggu yang nyaman bagi orang tua saat mengantar, menjemput, atau menunggu kegiatan sekolah selesai.</p></div></article>
+<article class="facility-card"><div class="facility-image"><img alt="Ruang P3K" src="assets/facility-first-aid-room.jpg"/></div><div class="facility-copy"><h3>First Aid Room</h3><p>Ruang pertolongan pertama untuk penanganan awal ketika anak membutuhkan perhatian kesehatan selama berada di sekolah.</p></div></article>
+</div>
+</section>
+<section class="gallery-section" id="page-school-life-gallery">
+<div class="container">
+<div class="gallery-heading">
+<span class="kicker">LITTLE MOMENTS, BIG MEMORIES</span>
+<h2>Everyday Moments at <em>Lumière.</em></h2>
+<p data-en="From simple daily activities to shared projects, every moment holds a story of children's learning and growth. Here are a few glimpses of life at Lumière Preschool." data-id="Dari kegiatan sederhana hingga proyek bersama, setiap momen menyimpan cerita tentang proses belajar dan tumbuh anak. Berikut beberapa potret kehidupan di Lumière Preschool.">Dari kegiatan sederhana hingga proyek bersama, setiap momen menyimpan cerita tentang proses belajar dan tumbuh anak. Berikut beberapa potret kehidupan di Lumière Preschool.</p>
+</div>
+<div class="gallery-grid">
+<div class="gallery-item"><img alt="Kegiatan eksplorasi anak" src="assets/gallery-01.jpg"/><div class="gallery-caption">Curious Explorers</div></div>
+<div class="gallery-item"><img alt="Kegiatan seni anak" src="assets/gallery-02.jpg"/><div class="gallery-caption">Little Creators</div></div>
+<div class="gallery-item"><img alt="Anak bermain bersama" src="assets/gallery-03.jpg"/><div class="gallery-caption">Growing Together</div></div>
+<div class="gallery-item"><img alt="Kegiatan belajar di luar ruang" src="assets/gallery-04.jpg"/><div class="gallery-caption">Outdoor Discoveries</div></div>
+<div class="gallery-item"><img alt="Kegiatan proyek kelompok" src="assets/gallery-05.jpg"/><div class="gallery-caption">Learning by Doing</div></div>
+<div class="gallery-item"><img alt="Kegiatan membaca bersama" src="assets/gallery-06.jpg"/><div class="gallery-caption">Stories &amp; Imagination</div></div>
+</div>
+</div>
+</section>
+<section class="school-note"><div class="container"><div class="school-note-card"><h2>Every Little Moment Matters.</h2><p data-en="We believe everyday experiences can become meaningful parts of a child's growth. In a supportive environment, children can feel welcomed, valued, and confident to try." data-id="Kami percaya pengalaman sehari-hari dapat menjadi bagian penting dari perjalanan tumbuh anak. Dengan lingkungan yang mendukung, anak dapat merasa diterima, dihargai, dan berani mencoba.">Kami percaya pengalaman sehari-hari dapat menjadi bagian penting dari perjalanan tumbuh anak. Dengan lingkungan yang mendukung, anak dapat merasa diterima, dihargai, dan berani mencoba.</p></div></div></section>
+</div><div class="single-page" id="page-parent-info-page-parent-info">
+<section class="parent-hero"><div class="container"><span class="kicker">A PARTNERSHIP WITH FAMILIES</span><h1>Growing Together, <em>Every Step.</em></h1><p>Informasi yang membantu orang tua mendampingi perjalanan belajar anak di Lumière Preschool, mulai dari agenda sekolah hingga panduan dan biaya pendidikan.</p></div></section>
+<section class="parent-section" id="page-parent-info-calendar"><div class="container"><div class="parent-heading"><span class="kicker">IMPORTANT DATES</span><h2>Our School <em>Calendar.</em></h2><p>Catat agenda penting sekolah agar orang tua dapat ikut mempersiapkan setiap pengalaman belajar anak.</p></div><div class="calendar-list">
+<div class="calendar-item"><div class="calendar-date"><small>TERM 1</small>To be set</div><div><h3>First Day of School</h3><p>Tanggal masuk dan kegiatan penyambutan awal tahun ajaran akan diumumkan oleh sekolah.</p></div></div>
+<div class="calendar-item"><div class="calendar-date"><small>TERM 1</small>To be set</div><div><h3>Parent–Teacher Meeting</h3><p>Kesempatan berdiskusi mengenai perkembangan dan pengalaman belajar anak.</p></div></div>
+<div class="calendar-item"><div class="calendar-date"><small>TERM 2</small>To be set</div><div><h3>Learning Exhibition</h3><p>Apresiasi proses belajar dan karya anak bersama keluarga dan komunitas sekolah.</p></div></div>
+<div class="calendar-item"><div class="calendar-date"><small>TERM 3</small>To be set</div><div><h3>End-of-Year Celebration</h3><p>Perayaan perjalanan dan pencapaian anak di akhir tahun ajaran.</p></div></div>
+</div></div></section>
+<section class="parent-section soft" id="page-parent-info-guide"><div class="container"><div class="parent-heading"><span class="kicker">A LITTLE GUIDE FOR FAMILIES</span><h2>Parent <em>Guide.</em></h2><p>Panduan singkat agar rutinitas sekolah anak berjalan nyaman, aman, dan menyenangkan.</p></div><div class="info-grid">
+<article class="info-card"><h3>Before School</h3><p>Pastikan anak beristirahat cukup, sarapan, dan membawa perlengkapan pribadi sesuai arahan guru.</p></article>
+<article class="info-card"><h3>Arrival &amp; Pick-up</h3><p>Antar dan jemput anak sesuai jadwal. Informasikan jika ada perubahan penjemput atau keterlambatan.</p></article>
+<article class="info-card"><h3>What to Bring</h3><p>Siapkan pakaian ganti, botol minum, bekal bila diperlukan, dan perlengkapan yang sudah diberi nama.</p></article>
+<article class="info-card"><h3>Health &amp; Safety</h3><p>Sampaikan informasi kondisi anak kepada guru. Anak yang kurang sehat sebaiknya beristirahat di rumah.</p></article>
+<article class="info-card"><h3>Stay Connected</h3><p>Ikuti pengumuman resmi sekolah dan sampaikan pertanyaan melalui saluran komunikasi sekolah.</p></article>
+<article class="info-card"><h3>Learning at Home</h3><p>Dukung rasa ingin tahu anak melalui percakapan, membaca bersama, dan kegiatan sederhana di rumah.</p></article>
+</div></div></section>
+<section class="parent-section" id="page-parent-info-fees"><div class="container"><div class="parent-heading"><span class="kicker">A CLEAR VIEW OF SCHOOL FEES</span><h2>Tuition <em>&amp; Fees.</em></h2><p>Pilih kelas dan kegiatan tambahan untuk melihat gambaran biaya pendidikan.</p></div><div class="fee-layout">
+<div class="fee-panel"><h3>Build Your Fee Plan</h3><div class="fee-field"><label for="classChoice">1. Choose a Class</label><select id="page-parent-info-classChoice"><option value="1000000">Playgroup</option><option selected="" value="1200000">Kindergarten A</option><option value="1300000">Kindergarten B</option></select></div>
+<div class="fee-field"><label for="programChoice">2. Learning Program</label><select id="page-parent-info-programChoice"><option>Regular Program</option></select></div>
+<div class="fee-field"><label>3. Choose Extracurricular Activities</label><div class="extra-list">
+<label class="extra-option"><input data-fee="500000" type="checkbox" value="Art &amp; Craft"/> Art &amp; Craft <small>Rp500.000 / bulan</small></label><label class="extra-option"><input data-fee="650000" type="checkbox" value="Music"/> Music <small>Rp650.000 / bulan</small></label><label class="extra-option"><input data-fee="750000" type="checkbox" value="Little Athlete"/> Little Athlete <small>Rp750.000 / bulan</small></label><label class="extra-option"><input data-fee="800000" type="checkbox" value="English Club"/> English Club <small>Rp800.000 / bulan</small></label><label class="extra-option"><input data-fee="550000" type="checkbox" value="Nature Explorer"/> Nature Explorer <small>Rp550.000 / bulan</small></label><label class="extra-option"><input data-fee="600000" type="checkbox" value="Storytelling &amp; Drama"/> Storytelling &amp; Drama <small>Rp600.000 / bulan</small></label>
+</div></div></div>
+<aside aria-live="polite" class="fee-summary"><h3>Your Fee Overview</h3><p>Estimasi berdasarkan kelas yang dipilih. Biaya ekstrakurikuler belum ditambahkan karena nominalnya belum ditetapkan.</p>
+<div class="fee-row"><span>Registration Form</span><strong>Rp300.000</strong></div><div class="fee-row"><span>Enrollment Fee</span><strong>Rp5.000.000</strong></div><div class="fee-row"><span>Monthly Tuition</span><strong id="page-parent-info-monthlyFee">Rp1.200.000</strong></div><div class="fee-row"><span>Annual Activity Fee</span><strong>Rp1.000.000</strong></div><div class="fee-row"><span>Selected Class</span><strong id="page-parent-info-selectedClass">Kindergarten A</strong></div><div class="fee-row"><span>Selected Extracurricular</span><strong id="page-parent-info-selectedExtras">None selected</strong></div><div class="fee-row"><span>Extracurricular Monthly Total</span><strong id="page-parent-info-extraTotal">Rp0</strong></div>
+<div class="fee-total"><span>First Payment Estimate*</span><output id="page-parent-info-firstPayment">Rp6.500.000</output></div><div class="fee-row"><span>Monthly Total (Tuition + Extras)</span><strong id="page-parent-info-monthlyTotal">Rp1.200.000</strong></div><p class="fee-disclaimer">*Pembayaran awal mencakup formulir pendaftaran, uang pangkal, dan SPP bulan pertama. Biaya kegiatan tahunan ditampilkan terpisah. Harga ekstrakurikuler dan detail pembayaran dapat diperbarui setelah ditetapkan sekolah.</p>
+</aside></div></div></section>
+<section class="parent-section soft" id="page-parent-info-faq"><div class="container"><div class="parent-heading"><span class="kicker">NEED TO KNOW</span><h2>Frequently Asked <em>Questions.</em></h2><p>Jawaban singkat untuk beberapa hal yang sering ditanyakan orang tua.</p></div><div class="faq-list">
+<details><summary>Bagaimana cara mendaftarkan anak?</summary><p>Orang tua dapat memulai melalui tombol Apply Now dan mengikuti tahapan pendaftaran dari pihak sekolah.</p></details>
+<details><summary>Bagaimana cara memilih kelas yang sesuai?</summary><p>Pilihan kelas terdiri dari Playgroup, Kindergarten A, dan Kindergarten B. Penempatan mengikuti ketentuan usia dan komunikasi dengan sekolah.</p></details>
+<details><summary>Apakah anak harus mengikuti ekstrakurikuler?</summary><p>Ekstrakurikuler merupakan kegiatan tambahan yang dapat dipilih sesuai minat anak dan ketersediaan program.</p></details>
+<details><summary>Bagaimana orang tua mengetahui perkembangan anak?</summary><p>Guru akan membagikan dokumentasi dan informasi perkembangan melalui komunikasi serta pertemuan sekolah.</p></details>
+<details><summary>Apakah kalender sekolah dapat berubah?</summary><p>Agenda dapat mengalami penyesuaian. Orang tua diharapkan mengikuti pengumuman resmi Lumière Preschool.</p></details>
+</div></div></section>
+<section class="parent-section"><div class="container"><div class="parent-note"><h2>Let's Grow Together.</h2><p>Kolaborasi antara sekolah dan keluarga membantu anak merasa didukung, dihargai, dan percaya diri dalam setiap proses belajarnya.</p></div></div></section>
+</div><div class="single-page" id="page-contact-page-contact">
+<section class="contact-hero"><div class="container"><span class="contact-kicker">WE'D LOVE TO HEAR FROM YOU</span><h1>Let's Get in <em>Touch.</em></h1><p>Punya pertanyaan tentang program, pendaftaran, atau kegiatan di Lumière Preschool? Kami senang membantu keluarga mengenal lingkungan belajar kami lebih dekat.</p></div></section>
+<section class="contact-section" id="page-contact-location"><div class="container">
+<div class="contact-heading"><span class="contact-kicker">COME AND VISIT US</span><h2>Find <em>Lumière Preschool.</em></h2><p>Kami menyambut orang tua yang ingin mengenal lingkungan sekolah dan melihat langsung ruang belajar anak.</p></div>
+<div class="contact-layout">
+<div class="contact-card"><h3>Contact Information</h3>
+<div class="contact-detail"><span class="contact-icon">⌖</span><div><strong>Our Location</strong><p>Gedung O6, FIP UNESA<br/>Lidah Wetan, Surabaya</p></div></div>
+<div class="contact-detail"><span class="contact-icon">☎</span><div><strong>Phone / WhatsApp</strong><p>0812xxxxxxxx</p></div></div>
+<div class="contact-detail"><span class="contact-icon">✉</span><div><strong>Email</strong><p>info@lumierepreschool.com</p></div></div>
+<div class="contact-detail"><span class="contact-icon">◷</span><div><strong>School Hours</strong><p>Senin–Jumat<br/>07.30–15.00 WIB</p></div></div>
+</div>
+<div class="map-card"><iframe allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Gedung%20O6%2C%20FIP%20UNESA%2C%20Lidah%20Wetan%2C%20Surabaya&amp;output=embed" title="Peta lokasi Lumière Preschool di Gedung O6 FIP UNESA, Lidah Wetan, Surabaya"></iframe><div class="map-caption"><strong>Map location</strong><br/>Gedung O6, FIP UNESA, Lidah Wetan, Surabaya. Pastikan titik lokasi sudah sesuai sebelum website dipublikasikan.</div></div>
+</div></div></section>
+<section class="contact-section soft" id="page-contact-message"><div class="container"><div class="contact-heading"><span class="contact-kicker">SEND US A MESSAGE</span><h2>How Can We <em>Help?</em></h2><p>Silakan tuliskan pertanyaan atau pesan untuk tim Lumière Preschool.</p></div>
+<div class="message-card"><h3>Write to Us</h3><form id="page-contact-contactForm"><div class="message-grid">
+<div class="message-field"><label for="parentName">Nama orang tua</label><input id="page-contact-parentName" name="name" placeholder="Nama lengkap" required="" type="text"/></div>
+<div class="message-field"><label for="parentEmail">Email</label><input id="page-contact-parentEmail" name="email" placeholder="nama@email.com" required="" type="email"/></div>
+<div class="message-field full"><label for="messageSubject">Topik pesan</label><input id="page-contact-messageSubject" name="subject" placeholder="Contoh: Informasi pendaftaran" required="" type="text"/></div>
+<div class="message-field full"><label for="parentMessage">Pesan</label><textarea id="page-contact-parentMessage" name="message" placeholder="Tuliskan pertanyaan atau pesan Anda..." required=""></textarea></div>
+<div class="message-field full"><button class="button" type="submit">Send Message</button></div>
+</div><p class="message-help">Formulir ini akan membuka aplikasi email pada perangkat Anda untuk mengirim pesan. Pastikan alamat email sekolah sudah benar sebelum digunakan.</p></form></div>
+</div></section>
+<section class="contact-section"><div class="container"><div class="contact-note"><h2>Every Family Is Welcome.</h2><p>Kami percaya komunikasi yang baik menjadi awal dari kolaborasi yang bermakna antara sekolah dan keluarga.</p></div></div></section>
+</div><div class="single-page" id="page-admissions-page-admissions">
+<section class="admission-hero"><div class="inner"><span class="eyebrow">ADMISSIONS • ACADEMIC YEAR 2026/2027</span><h1>Your Child's Journey <em>Starts Here.</em></h1><p>Pendaftaran peserta didik baru Lumière Preschool tahun ajaran 2026/2027. Mari tumbuh bersama dalam lingkungan belajar yang hangat, aman, dan penuh rasa ingin tahu.</p></div></section>
+<section class="admission-section"><div class="container"><div class="section-heading"><span class="eyebrow">WHY LUMIÈRE</span><h2>A Wonderful Place to <em>Begin.</em></h2><p>Kami mendampingi anak untuk belajar melalui rasa ingin tahu, pengalaman langsung, kreativitas, dan hubungan yang positif dengan lingkungan sekitarnya.</p></div>
+<div class="admission-grid">
+<article class="info-card"><div class="number">01</div><h3>Child-Centered Learning</h3><p>Anak diberi ruang untuk bertanya, mencoba, bereksplorasi, dan mengembangkan minatnya melalui pendekatan Reggio Emilia.</p></article>
+<article class="info-card"><div class="number">02</div><h3>Meaningful Experiences</h3><p>Kegiatan belajar dirancang agar anak memperoleh pengalaman nyata melalui bermain, proyek, seni, dan eksplorasi lingkungan.</p></article>
+<article class="info-card"><div class="number">03</div><h3>Growing Together</h3><p>Sekolah dan keluarga membangun komunikasi serta kolaborasi untuk mendukung proses tumbuh kembang setiap anak.</p></article>
+</div></div></section>
+<section class="admission-section soft" id="page-admissions-programs"><div class="container"><div class="section-heading"><span class="eyebrow">CHOOSE YOUR PROGRAM</span><h2>Find the Right <em>Class.</em></h2><p>Pilih kelompok belajar yang sesuai dengan tahap perkembangan anak. Informasi usia berikut dapat disesuaikan dengan kebijakan penerimaan sekolah.</p></div>
+<div class="admission-grid">
+<article class="program-card"><span class="program-age">Early Years</span><h3>Playgroup</h3><p>Pengalaman awal untuk mengenal lingkungan belajar, membangun kemandirian, berinteraksi, dan bereksplorasi melalui permainan.</p></article>
+<article class="program-card"><span class="program-age">Kindergarten</span><h3>Kindergarten A</h3><p>Mengembangkan rasa ingin tahu, kemampuan sosial, kreativitas, dan keterampilan dasar melalui kegiatan berbasis pengalaman.</p></article>
+<article class="program-card"><span class="program-age">Kindergarten</span><h3>Kindergarten B</h3><p>Mendukung kesiapan anak menuju jenjang berikutnya melalui proyek, eksplorasi, komunikasi, dan pemecahan masalah sederhana.</p></article>
+</div></div></section>
+<section class="admission-section"><div class="container"><div class="section-heading"><span class="eyebrow">HOW TO APPLY</span><h2>The Admission <em>Process.</em></h2><p>Berikut gambaran tahapan pendaftaran peserta didik baru.</p></div>
+<div class="steps">
+<div class="step"><b>01</b><h3>Submit Inquiry</h3><p>Isi formulir minat pendaftaran dan data awal calon peserta didik.</p></div>
+<div class="step"><b>02</b><h3>School Visit</h3><p>Tim sekolah menghubungi orang tua untuk informasi dan jadwal kunjungan.</p></div>
+<div class="step"><b>03</b><h3>Meet &amp; Connect</h3><p>Orang tua dan anak berkenalan dengan lingkungan serta tim sekolah.</p></div>
+<div class="step"><b>04</b><h3>Confirmation</h3><p>Orang tua menerima informasi lanjutan mengenai hasil dan administrasi pendaftaran.</p></div>
+</div></div></section>
+<section class="admission-section soft" id="page-admissions-requirements"><div class="container"><div class="section-heading"><span class="eyebrow">GET READY</span><h2>Registration <em>Checklist.</em></h2><p>Dokumen yang umumnya perlu disiapkan. Daftar final dapat dikonfirmasi kembali kepada pihak sekolah.</p></div>
+<div class="admission-grid">
+<article class="info-card"><div class="number">A</div><h3>Child's Documents</h3><ul><li>Salinan akta kelahiran</li><li>Salinan kartu keluarga</li><li>Pas foto calon peserta didik</li></ul></article>
+<article class="info-card"><div class="number">B</div><h3>Parent's Documents</h3><ul><li>Identitas orang tua/wali</li><li>Nomor telepon aktif</li><li>Alamat email aktif</li></ul></article>
+<article class="info-card"><div class="number">C</div><h3>Additional Information</h3><ul><li>Informasi kesehatan anak yang relevan</li><li>Riwayat pendidikan sebelumnya (jika ada)</li><li>Informasi pendukung lain bila diminta sekolah</li></ul></article>
+</div></div></section>
+<section class="admission-section" id="page-admissions-registration"><div class="container"><div class="section-heading"><span class="eyebrow">START YOUR APPLICATION</span><h2>Online Registration <em>Inquiry.</em></h2><p>Lengkapi formulir berikut untuk menyampaikan minat pendaftaran. Tim sekolah dapat menghubungi orang tua melalui informasi yang diberikan.</p></div>
+<div class="form-shell"><h3>Student &amp; Parent Information</h3>
+<form id="page-admissions-admissionForm">
+<div class="form-group-title">Child's Information</div><div class="form-grid">
+<div class="field"><label for="childName">Nama lengkap anak *</label><input id="page-admissions-childName" name="childName" placeholder="Nama sesuai dokumen" required=""/></div>
+<div class="field"><label for="birthDate">Tanggal lahir *</label><input id="page-admissions-birthDate" name="birthDate" required="" type="date"/></div>
+<div class="field"><label for="gender">Jenis kelamin *</label><select id="page-admissions-gender" name="gender" required=""><option value="">Pilih salah satu</option><option>Perempuan</option><option>Laki-laki</option></select></div>
+<div class="field"><label for="program">Program yang diminati *</label><select id="page-admissions-program" name="program" required=""><option value="">Pilih program</option><option>Playgroup</option><option>Kindergarten A</option><option>Kindergarten B</option></select></div>
+</div>
+<div class="form-group-title">Parent / Guardian Information</div><div class="form-grid">
+<div class="field"><label for="parentName">Nama orang tua/wali *</label><input id="page-admissions-parentName" name="parentName" placeholder="Nama lengkap" required=""/></div>
+<div class="field"><label for="relationship">Hubungan dengan anak *</label><select id="page-admissions-relationship" name="relationship" required=""><option value="">Pilih hubungan</option><option>Ayah</option><option>Ibu</option><option>Wali</option></select></div>
+<div class="field"><label for="phone">Nomor WhatsApp *</label><input id="page-admissions-phone" name="phone" placeholder="08xxxxxxxxxx" required="" type="tel"/></div>
+<div class="field"><label for="email">Email *</label><input id="page-admissions-email" name="email" placeholder="nama@email.com" required="" type="email"/></div>
+<div class="field full"><label for="address">Alamat domisili *</label><textarea id="page-admissions-address" name="address" placeholder="Alamat lengkap tempat tinggal" required=""></textarea></div>
+<div class="field full"><label for="notes">Catatan atau pertanyaan (opsional)</label><textarea id="page-admissions-notes" name="notes" placeholder="Tuliskan hal yang ingin ditanyakan kepada tim sekolah"></textarea></div>
+</div>
+<p class="form-note">Dengan mengirim formulir ini, orang tua menyampaikan minat pendaftaran dan bersedia dihubungi oleh pihak sekolah. Formulir ini merupakan formulir inquiry awal, bukan konfirmasi penerimaan siswa. Mohon jangan mengirimkan dokumen sensitif melalui formulir ini.</p>
+<button class="button" type="submit">Submit Registration Inquiry</button>
+<div class="form-status" id="page-admissions-formStatus" role="status"></div>
+</form></div></div></section>
+<section class="admission-section"><div class="container"><div class="closing"><h2>Let's Make Their First Steps Meaningful.</h2><p>Ingin mengetahui lebih lanjut sebelum mendaftar? Silakan hubungi tim kami atau kunjungi halaman Contact untuk melihat lokasi sekolah melalui Google Maps.</p></div></div></section>
+</div><div class="single-page" id="page-developer-page-developer">
+<section class="dev-hero"><span class="eyebrow">BEHIND THE WEBSITE</span><h1>Meet the <em>Developer.</em></h1><p>Kenali sosok di balik perancangan dan pengembangan website Lumière Preschool.</p></section>
+<section class="dev-section"><div class="container"><div class="dev-profile">
+<div class="dev-photo-wrap"><img alt="Foto Azizah Aulia" class="dev-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'" src="assets/developer.jpg"/><div id="page-developer-photoFallback" style="display:none;aspect-ratio:4/5;border-radius:22px;background:#DCEBFF;color:#2455B5;place-items:center;text-align:center;padding:25px;font:600 22px Fredoka,sans-serif">Your Photo<br/><small style="font:600 13px Nunito,sans-serif;color:#68788B">assets/images/developer.jpg</small></div><p class="dev-photo-note">Website developer profile</p></div>
+<div class="dev-info"><span class="dev-kicker">THE CREATOR</span><h2>Azizah Aulia</h2><span class="dev-role">Website Developer</span>
+<p>Azizah Aulia merupakan mahasiswa S1 Pendidikan Guru Pendidikan Anak Usia Dini (PG-PAUD) semester 7 yang memiliki ketertarikan pada pengembangan website dan pemanfaatan teknologi dalam dunia pendidikan.</p>
+<p>Dalam proyek Lumière Preschool, Azizah berperan dalam merancang dan mengembangkan website dengan memperhatikan tampilan visual, kemudahan navigasi, serta penyajian informasi sekolah agar mudah diakses oleh orang tua dan pengunjung.</p>
+<div class="dev-details">
+<div class="dev-detail"><small>Education</small><strong>S1 PG-PAUD</strong></div>
+<div class="dev-detail"><small>Current Semester</small><strong>Semester 7</strong></div>
+<div class="dev-detail"><small>Project Role</small><strong>Website Developer</strong></div>
+<div class="dev-detail"><small>Instagram</small><strong>@azizhh_10</strong></div>
+</div></div></div></div></section>
+<section class="dev-section dev-skills"><div class="container"><div class="dev-heading"><span class="dev-kicker">TOOLS &amp; EXPERTISE</span><h2>Building the Digital Experience.</h2><p>Teknologi dan perangkat yang digunakan dalam proses pengerjaan website Lumière Preschool.</p></div>
+<div class="skill-grid">
+<article class="skill-card"><div class="skill-icon">⌨</div><h3>HTML</h3><p>Menyusun struktur halaman dan konten website.</p></article>
+<article class="skill-card"><div class="skill-icon">✦</div><h3>CSS</h3><p>Mengatur tampilan, warna, tipografi, dan responsivitas website.</p></article>
+<article class="skill-card"><div class="skill-icon">⚙</div><h3>JavaScript</h3><p>Menambahkan interaksi dan fungsi pada elemen website.</p></article>
+<article class="skill-card"><div class="skill-icon">▣</div><h3>Visual Studio Code</h3><p>Editor kode yang digunakan untuk mengembangkan dan mengelola file website.</p></article>
+<article class="skill-card"><div class="skill-icon">✧</div><h3>ChatGPT</h3><p>Asisten pendukung untuk eksplorasi ide, penyusunan konten, dan pemecahan masalah selama proses pengembangan.</p></article>
+<article class="skill-card"><div class="skill-icon">✧</div><h3>Canva</h3><p>Membuat dan mengolah elemen visual, materi grafis, serta aset desain pendukung website.</p></article>
+<article class="skill-card"><div class="skill-icon">◎</div><h3>Creative Design</h3><p>Memperhatikan konsistensi visual dan pengalaman pengguna dalam setiap halaman.</p></article>
+</div></div></section>
+<section class="dev-section"><div class="container"><div class="dev-social"><h2>Let's Connect.</h2><p>Temukan dan ikuti aktivitas melalui Instagram.</p><a href="https://www.instagram.com/azizhh_10/" rel="noopener noreferrer" target="_blank">@azizhh_10</a></div></div></section>
+</div></main><footer class="footer">
+<div class="container footer-grid">
+<div class="footer-brand-block"><img alt="Lumière Preschool" src="assets/logo-lumiere.png"/><p data-en="A joyful place to explore, create, discover, and grow." data-id="Tempat menyenangkan untuk bereksplorasi, berkarya, menemukan hal baru, dan bertumbuh.">Tempat menyenangkan untuk bereksplorasi, berkarya, menemukan hal baru, dan bertumbuh.</p></div>
+<div><h3>Explore</h3><a href="#page-about">About Us</a><a href="#page-programs">Programs</a><a href="#page-learning">Learning</a><a href="#page-school-life">School Life</a></div>
+<div><h3>For Families</h3><a href="#page-parent-info">Parent Info</a><a href="#page-admissions">PPDB / Admission</a><a href="tuition.html">Tuition &amp; Fees</a></div>
+<div><h3>Contact</h3><p>Gedung O6, FIP UNESA<br/>Lidah Wetan, Surabaya</p><p>0812xxxxxxxx<br/>info@lumierepreschool.com</p><p>Senin–Jumat, 07.30–15.00 WIB</p></div>
+</div>
+<div class="container footer-bottom"><span>© <span id="year"></span> Lumière Preschool</span><a href="#page-developer">Website Developer</a><a href="admin/login.html">Admin Login</a></div>
+</footer><script>const menuToggle = document.getElementById('menuToggle');
+const navLinks = document.getElementById('navLinks');
+const languageToggle = document.getElementById('languageToggle');
+
+menuToggle?.addEventListener('click', () => {
+  const isOpen = navLinks.classList.toggle('open');
+  menuToggle.setAttribute('aria-expanded', String(isOpen));
+  menuToggle.textContent = isOpen ? '✕' : '☰';
+});
+
+// Dropdown bisa dibuka dengan klik agar nyaman di desktop maupun perangkat sentuh.
+document.querySelectorAll('.drop-trigger').forEach(trigger => {
+  trigger.addEventListener('click', () => {
+    const parent = trigger.closest('.dropdown');
+    const willOpen = !parent.classList.contains('open');
+    document.querySelectorAll('.dropdown.open').forEach(item => {
+      item.classList.remove('open');
+      item.querySelector('.drop-trigger')?.setAttribute('aria-expanded', 'false');
+    });
+    if (willOpen) {
+      parent.classList.add('open');
+      trigger.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
+
+document.addEventListener('click', event => {
+  if (!event.target.closest('.dropdown')) {
+    document.querySelectorAll('.dropdown.open').forEach(item => {
+      item.classList.remove('open');
+      item.querySelector('.drop-trigger')?.setAttribute('aria-expanded', 'false');
+    });
+  }
+});
+
+document.querySelectorAll('#navLinks a').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    menuToggle?.setAttribute('aria-expanded', 'false');
+    if (menuToggle) menuToggle.textContent = '☰';
+  });
+});
+
+let currentLanguage = 'id';
+languageToggle?.addEventListener('click', () => {
+  currentLanguage = currentLanguage === 'en' ? 'id' : 'en';
+  document.documentElement.lang = currentLanguage;
+  document.querySelectorAll('[data-en][data-id]').forEach(element => {
+    element.innerHTML = element.dataset[currentLanguage];
+  });
+  languageToggle.textContent = currentLanguage === 'en' ? 'ID' : 'EN';
+});
+
+const yearNode = document.getElementById('year'); if (yearNode) yearNode.textContent = new Date().getFullYear();
+
+const revealObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(element => revealObserver.observe(element));
+
+try {
+
+(()=>{
+ const c=document.getElementById('classChoice');
+ const m=document.getElementById('monthlyFee');
+ const s=document.getElementById('selectedClass');
+ const x=document.getElementById('selectedExtras');
+ const extraTotal=document.getElementById('extraTotal');
+ const monthlyTotal=document.getElementById('monthlyTotal');
+ const firstPayment=document.getElementById('firstPayment');
+ const checks=[...document.querySelectorAll('.extra-list input[type="checkbox"]')];
+ const rp=n=>'Rp'+Number(n).toLocaleString('id-ID');
+ function update(){
+   const tuition=Number(c.value);
+   const className=c.options[c.selectedIndex].text;
+   const chosen=checks.filter(a=>a.checked);
+   const extraSum=chosen.reduce((sum,a)=>sum+Number(a.dataset.fee||0),0);
+   m.textContent=rp(tuition);
+   s.textContent=className;
+   x.textContent=chosen.length?chosen.map(a=>a.value).join(', '):'None selected';
+   extraTotal.textContent=rp(extraSum);
+   monthlyTotal.textContent=rp(tuition+extraSum);
+   firstPayment.textContent=rp(300000+5000000+tuition+extraSum);
+ }
+ c.addEventListener('change',update);
+ checks.forEach(a=>a.addEventListener('change',update));
+ update();
+})();
+
+} catch (error) { console.warn('Bagian interaktif halaman tidak dapat dijalankan:', error); }
+try {
+
+document.getElementById('contactForm').addEventListener('submit',function(event){
+ event.preventDefault();
+ const data=new FormData(this);
+ const subject=encodeURIComponent(data.get('subject')+' — Lumière Preschool');
+ const body=encodeURIComponent('Nama: '+data.get('name')+'\nEmail: '+data.get('email')+'\n\nPesan:\n'+data.get('message'));
+ window.location.href='mailto:info@lumierepreschool.com?subject='+subject+'&body='+body;
+});
+
+} catch (error) { console.warn('Bagian interaktif halaman tidak dapat dijalankan:', error); }
+try {
+
+document.getElementById('admissionForm').addEventListener('submit',function(event){
+ event.preventDefault();
+ const form=new FormData(this);
+ const subject=encodeURIComponent('Registration Inquiry — '+form.get('childName'));
+ const body=encodeURIComponent(
+  'DATA CALON PESERTA DIDIK\nNama anak: '+form.get('childName')+
+  '\nTanggal lahir: '+form.get('birthDate')+
+  '\nJenis kelamin: '+form.get('gender')+
+  '\nProgram: '+form.get('program')+
+  '\n\nDATA ORANG TUA/WALI\nNama: '+form.get('parentName')+
+  '\nHubungan: '+form.get('relationship')+
+  '\nWhatsApp: '+form.get('phone')+
+  '\nEmail: '+form.get('email')+
+  '\nAlamat: '+form.get('address')+
+  '\n\nCatatan: '+(form.get('notes')||'-')
+ );
+ document.getElementById('formStatus').style.display='block';
+ document.getElementById('formStatus').textContent='Aplikasi email akan terbuka untuk mengirim inquiry. Periksa kembali alamat tujuan dan isi pesan sebelum mengirim.';
+ window.location.href='mailto:info@lumierepreschool.com?subject='+subject+'&body='+body;
+});
+
+} catch (error) { console.warn('Bagian interaktif halaman tidak dapat dijalankan:', error); }</script>
+<script id="singleHtmlPageNavigation">
+(function(){
+  const pages = {
+    'page-index':'page-index',
+    'page-about':'page-about-page-about',
+    'page-programs':'page-programs-page-programs',
+    'page-learning':'page-learning-page-learning',
+    'page-school-life':'page-school-life-page-school-life',
+    'page-parent-info':'page-parent-info-page-parent-info',
+    'page-contact':'page-contact-page-contact',
+    'page-admissions':'page-admissions-page-admissions',
+    'page-developer':'page-developer-page-developer'
+  };
+  const roots = Object.keys(pages).sort((a,b)=>b.length-a.length);
+  function getPageKey(hash){
+    const id=(hash||'').replace(/^#/, '');
+    return roots.find(key => id===key || id.startsWith(key+'-')) || 'page-index';
+  }
+  function showPage(hash, updateHistory=true){
+    const key=getPageKey(hash);
+    document.querySelectorAll('main > .single-page').forEach(page=>{
+      page.classList.toggle('is-active', page.id===pages[key]);
+    });
+    if(updateHistory && location.hash!==('#'+key)) history.pushState(null,'','#'+key);
+    window.scrollTo({top:0,behavior:'auto'});
+    const nav=document.getElementById('navLinks');
+    if(nav) nav.classList.remove('show');
+    document.querySelectorAll('.dropdown.open').forEach(el=>el.classList.remove('open'));
+  }
+  document.addEventListener('click',function(event){
+    const link=event.target.closest('a[href^="#page-"]');
+    if(!link) return;
+    event.preventDefault();
+    showPage(link.getAttribute('href'),true);
+  });
+  window.addEventListener('popstate',()=>showPage(location.hash,false));
+  window.addEventListener('hashchange',()=>showPage(location.hash,false));
+  showPage(location.hash || '#page-index',false);
+})();
+</script>
+</body></html>
