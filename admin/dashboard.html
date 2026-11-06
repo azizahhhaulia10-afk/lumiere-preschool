@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard | Lumière Preschool Admin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}body{margin:0;background:#F5F8FD;color:#26364A;font-family:Nunito,sans-serif}.layout{min-height:100vh;display:grid;grid-template-columns:245px 1fr}.sidebar{background:#fff;border-right:1px solid #e5edf8;padding:25px 17px;display:flex;flex-direction:column}.brand{display:flex;align-items:center;gap:11px;padding:0 8px 27px}.mark{width:42px;height:42px;border-radius:14px;background:#2455B5;color:white;display:grid;place-items:center;font:600 23px Fredoka}.brand strong{display:block;font:600 18px Fredoka}.brand small{color:#718096;font-size:11px}.nav-label{font-size:10px;letter-spacing:1.5px;color:#91a0b4;font-weight:900;padding:10px 12px}.nav a{display:flex;gap:12px;align-items:center;text-decoration:none;color:#607087;padding:12px;border-radius:12px;font-weight:800;font-size:14px;margin:3px 0}.nav a.active,.nav a:hover{background:#EAF4FF;color:#2455B5}.sidebar-bottom{margin-top:auto}.sidebar-bottom a{color:#2455B5;text-decoration:none;font-weight:900;font-size:13px;padding:12px;display:block}.main{min-width:0}.topbar{height:76px;background:#fff;border-bottom:1px solid #e5edf8;display:flex;align-items:center;justify-content:space-between;padding:0 32px}.topbar h1{font:600 23px Fredoka;margin:0}.admin-chip{background:#EAF4FF;color:#2455B5;border-radius:30px;padding:8px 13px;font-size:12px;font-weight:900}.content{padding:30px;max-width:1400px;margin:auto}.welcome{margin-bottom:25px}.welcome h2{font:600 29px Fredoka;margin:0 0 5px}.welcome p{color:#718096;margin:0}.demo-alert{background:#FFF8E8;border:1px solid #F6E5B8;color:#87631b;padding:12px 15px;border-radius:13px;font-size:13px;line-height:1.6;margin:18px 0 24px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:17px}.stat,.panel{background:#fff;border:1px solid #e5edf8;border-radius:18px;padding:21px;box-shadow:0 7px 20px #2455b508}.stat small{color:#718096;font-weight:800}.stat strong{display:block;font:600 31px Fredoka;margin:7px 0 3px;color:#2455B5}.stat span{font-size:12px;color:#8a98aa}.columns{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;margin-top:20px}.panel h3{font:600 20px Fredoka;margin:0 0 16px}.table-wrap{overflow-x:auto}table{width:100%;border-collapse:collapse;min-width:440px}th,td{text-align:left;padding:12px 10px;border-bottom:1px solid #edf1f7;font-size:13px}th{color:#8290a3;font-size:11px;letter-spacing:.5px}td{color:#52647a}.status{display:inline-block;padding:5px 9px;border-radius:20px;background:#EAF4FF;color:#2455B5;font-size:11px;font-weight:900}.event{padding:13px 0;border-bottom:1px solid #edf1f7}.event:last-child{border:0}.event strong{display:block;font-size:14px}.event span{font-size:12px;color:#8290a3}.quicklinks{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}.quicklinks a{background:#F5F9FF;border:1px solid #e5edf8;border-radius:12px;padding:13px;text-decoration:none;color:#2455B5;font-weight:900;font-size:13px}.footer-note{color:#94a0b0;font-size:12px;text-align:center;margin:25px 0 0}
+@media(max-width:1000px){.stats{grid-template-columns:repeat(2,1fr)}.columns{grid-template-columns:1fr}}
+@media(max-width:700px){.layout{grid-template-columns:1fr}.sidebar{padding:12px 14px;border-right:0;border-bottom:1px solid #e5edf8}.brand{padding:0 5px 10px}.nav-label,.sidebar-bottom{display:none}.nav{display:flex;overflow-x:auto;gap:4px}.nav a{white-space:nowrap;padding:9px 11px;font-size:12px}.topbar{height:60px;padding:0 18px}.content{padding:20px 15px}.stats{gap:10px}.stat{padding:15px}.stat strong{font-size:26px}}
+@media(max-width:420px){.stats{grid-template-columns:1fr 1fr}.admin-chip{font-size:10px}}
+</style></head>
+<body>
+<div class="layout">
+<aside class="sidebar"><div class="brand"><div class="mark">L</div><div><strong>Lumière Preschool</strong><small>ADMIN PANEL</small></div></div>
+<div class="nav-label">MAIN MENU</div><nav class="nav"><a class="active" href="dashboard.html">▦ Dashboard</a><a href="#registrations">▤ Registrations</a><a href="#school">⌂ School Information</a><a href="#fees">＄ Tuition &amp; Fees</a><a href="#calendar">▣ School Calendar</a><a href="#gallery">▧ Gallery</a><a href="#profile">◎ Admin Profile</a></nav>
+<div class="sidebar-bottom"><a href="../index.html">↗ View Website</a><a href="#" id="logout">⇥ Logout</a></div></aside>
+<div class="main"><header class="topbar"><h1>Dashboard</h1><span class="admin-chip">Administrator · Demo</span></header>
+<main class="content"><div class="welcome"><h2>Good morning, Admin! 👋</h2><p>Welcome to Lumière Preschool website management.</p></div>
+<div class="demo-alert"><strong>Simulation Mode:</strong> Data pada dashboard ini merupakan data contoh untuk keperluan demonstrasi tugas. Login ini tidak menggunakan database dan bukan sistem keamanan untuk website produksi.</div>
+<section class="stats">
+<div class="stat"><small>Total Students</small><strong>92</strong><span>Active students · sample data</span></div>
+<div class="stat"><small>New Registrations</small><strong>18</strong><span>Academic year 2026/2027</span></div>
+<div class="stat"><small>Programs</small><strong>3</strong><span>Playgroup &amp; Kindergarten</span></div>
+<div class="stat"><small>Gallery Photos</small><strong>24</strong><span>Website media · sample data</span></div>
+</section>
+<div class="columns">
+<section class="panel" id="registrations"><h3>Recent Registrations</h3><div class="table-wrap"><table><thead><tr><th>STUDENT</th><th>PROGRAM</th><th>DATE</th><th>STATUS</th></tr></thead><tbody>
+<tr><td>Aruna Putri</td><td>Playgroup</td><td>02 Nov 2026</td><td><span class="status">Review</span></td></tr>
+<tr><td>Rafael Aditya</td><td>Kindergarten A</td><td>01 Nov 2026</td><td><span class="status">New</span></td></tr>
+<tr><td>Naura Safitri</td><td>Kindergarten B</td><td>30 Oct 2026</td><td><span class="status">Review</span></td></tr>
+<tr><td>Kenzo Mahendra</td><td>Playgroup</td><td>28 Oct 2026</td><td><span class="status">New</span></td></tr>
+</tbody></table></div></section>
+<section class="panel" id="calendar"><h3>Upcoming Activities</h3>
+<div class="event"><strong>Parent-Teacher Meeting</strong><span>12 November 2026 · School Hall</span></div>
+<div class="event"><strong>Little Explorers Day</strong><span>19 November 2026 · Learning Garden</span></div>
+<div class="event"><strong>Creative Art Exhibition</strong><span>27 November 2026 · Art Atelier</span></div>
+</section></div>
+<div class="columns">
+<section class="panel" id="school"><h3>Website Overview</h3><div class="event"><strong>School Profile</strong><span>School description, vision, mission, and educators</span></div><div class="event" id="fees"><strong>Tuition &amp; Fees</strong><span>Fee information for three learning programs</span></div><div class="event" id="gallery"><strong>Gallery &amp; Facilities</strong><span>School life photos and facility information</span></div></section>
+<section class="panel" id="profile"><h3>Quick Access</h3><div class="quicklinks"><a href="../index.html">Open Homepage ↗</a><a href="../parent-info.html">Parent Information ↗</a><a href="../admissions.html">Admissions Page ↗</a><a href="../contact.html">Contact Page ↗</a></div></section></div>
+<p class="footer-note">© 2026 Lumière Preschool · Admin Dashboard Simulation</p>
+</main></div></div>
+<script>
+if(sessionStorage.getItem('lumiereDemoAdmin')!=='true'){location.replace('login.html')}
+document.getElementById('logout').addEventListener('click',e=>{e.preventDefault();sessionStorage.removeItem('lumiereDemoAdmin');location.href='login.html'});
+</script></body></html>
